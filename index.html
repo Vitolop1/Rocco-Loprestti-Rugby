@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rocco Loprestti | Rugby Highlights & Player Profile</title>
+  <meta name="description" content="Rocco Loprestti Rugby Highlights, Player Profile, Positions, Experience, Skills, and Contact." />
+  <meta name="theme-color" content="#0b0f1a" />
+
+  <!-- Open Graph (nice preview when shared) -->
+  <meta property="og:title" content="Rocco Loprestti | Rugby Highlights & Player Profile" />
+  <meta property="og:description" content="Highlights, experience, skills, and contact info for Rocco Loprestti." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/rocco-1.jpg" />
+
+  <style>
+    :root{
+      --bg:#0b0f1a;
+      --card:#111a33;
+      --card2:#0e1630;
+      --text:#e8eefc;
+      --muted:rgba(232,238,252,.78);
+      --line:#243055;
+      --accent:#2b6cff;
+      --accent2:#6ea8ff;
+      --ok:#3ddc97;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(900px 450px at 10% 10%, rgba(43,108,255,.18), transparent 50%),
+                  radial-gradient(900px 450px at 90% 30%, rgba(61,220,151,.12), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a{color:var(--accent2); text-decoration:none;}
+    a:hover{ text-decoration: underline; }
+
+    .container{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header{
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(17,26,51,.9), rgba(11,15,26,.2));
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    .nav{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content: space-between;
+      padding: 12px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      min-width: 240px;
+    }
+
+    .badge{
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: rgba(43,108,255,.15);
+      border:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      box-shadow: var(--shadow);
+    }
+
+    .brand h1{
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .brand p{
+      margin: 0;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .links{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill{
+      padding: 8px 10px;
+      border:1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(17,26,51,.65);
+      font-size: 13px;
+      color: var(--text);
+      text-decoration:none;
+    }
+    .pill:hover{border-color: rgba(110,168,255,.7); text-decoration:none;}
+
+    .hero{
+      padding: 26px 0 10px;
+    }
+
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 900px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .links{ justify-content: flex-start; }
+      header{ position: static; }
+    }
+
+    .card{
+      background: rgba(17,26,51,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .cardInner{
+      padding: 18px;
+    }
+
+    .headline{
+      font-size: 34px;
+      margin: 0 0 8px;
+      letter-spacing: .2px;
+    }
+
+    .sub{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(14,22,48,.8);
+      color: var(--text);
+      text-decoration:none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .btnPrimary{
+      background: rgba(43,108,255,.9);
+      border-color: rgba(43,108,255,.9);
+      color: white;
+    }
+    .btnPrimary:hover{ text-decoration:none; filter: brightness(1.05); }
+    .btn:hover{ text-decoration:none; border-color: rgba(110,168,255,.7); }
+
+    .quickFacts{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .fact{
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(14,22,48,.65);
+      border: 1px solid var(--line);
+    }
+    .fact b{ display:block; font-size: 13px; }
+    .fact span{ color: var(--muted); font-size: 13px; }
+
+    .section{
+      margin-top: 18px;
+    }
+    .section h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+    .section p{
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 900px){
+      .grid3{ grid-template-columns: 1fr; }
+    }
+
+    .list{
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    .list li{ margin: 6px 0; }
+
+    .tagRow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .tag{
+      font-size: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(14,22,48,.65);
+      color: var(--text);
+    }
+    .tagStrong{
+      border-color: rgba(61,220,151,.55);
+      background: rgba(61,220,151,.12);
+    }
+
+    .videoWrap{
+      position: relative;
+      padding-top: 56.25%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: rgba(14,22,48,.65);
+    }
+    .videoWrap iframe{
+      position:absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 900px){
+      .gallery{ grid-template-columns: 1fr; }
+    }
+    .photo{
+      border-radius: var(--radius);
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: rgba(14,22,48,.65);
+    }
+    .photo img{
+      width:100%;
+      height: 260px;
+      object-fit: cover;
+      display:block;
+    }
+
+    .footer{
+      margin-top: 18px;
+      padding: 18px 0 30px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .smallNote{
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 900px){
+      .contactGrid{ grid-template-columns: 1fr; }
+    }
+
+    .input, .textarea{
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(14,22,48,.6);
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+    }
+    .textarea{ min-height: 110px; resize: vertical; }
+
+    .divider{
+      height: 1px;
+      background: var(--line);
+      margin: 14px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="badge">RL</div>
+          <div>
+            <h1>Rocco Loprestti</h1>
+            <p>Rugby Highlights • Player Profile • Recruiting Page</p>
+          </div>
+        </div>
+
+        <div class="links">
+          <a class="pill" href="#highlights">Highlights</a>
+          <a class="pill" href="#profile">Profile</a>
+          <a class="pill" href="#experience">Experience</a>
+          <a class="pill" href="#skills">Skills</a>
+          <a class="pill" href="#gallery">Gallery</a>
+          <a class="pill" href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="heroGrid">
+        <div class="card">
+          <div class="cardInner">
+            <h2 class="headline">Rocco Loprestti</h2>
+            <p class="sub">
+              Versatile rugby player with experience across forward and backline roles, including front row and midfield, with in-game kicking and goal-kicking ability.
+            </p>
+
+            <div class="ctaRow">
+              <a class="btn btnPrimary" href="#highlights">Watch Highlights</a>
+              <a class="btn" href="assets/rocco-rugby-resume.pdf" target="_blank" rel="noopener">Download Rugby Resume (PDF)</a>
+              <a class="btn" href="#contact">Contact / Recruiting</a>
+            </div>
+
+            <div class="tagRow">
+              <span class="tag tagStrong">Pillar (Prop)</span>
+              <span class="tag tagStrong">Second Row</span>
+              <span class="tag tagStrong">Back Row</span>
+              <span class="tag">Center</span>
+              <span class="tag">Kicking</span>
+              <span class="tag">Goal Kicking</span>
+            </div>
+
+            <p class="smallNote">
+              Tip: Replace the videos and photos below with your real highlight links. This page is designed to be clean and coach-friendly.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h2 style="margin:0 0 10px; font-size:18px;">Quick Facts</h2>
+
+            <div class="quickFacts">
+              <div class="fact">
+                <b>Date of Birth</b>
+                <span>07/06/2009</span>
+              </div>
+              <div class="fact">
+                <b>Height</b>
+                <span>1.84 m (6’1”)</span>
+              </div>
+              <div class="fact">
+                <b>Weight</b>
+                <span>97 kg</span>
+              </div>
+              <div class="fact">
+                <b>Playing Since</b>
+                <span>2012</span>
+              </div>
+              <div class="fact">
+                <b>Current Club</b>
+                <span>Cardinals Club (2025–present)</span>
+              </div>
+              <div class="fact">
+                <b>School</b>
+                <span>Ardrey Kell High School</span>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <p class="smallNote" style="margin:0;">
+              Positions played: Prop (Pillar), Second Row, Back Row, Center.
+              <br/>Abilities: In-game kicking and goal-kicking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHTS -->
+    <section id="highlights" class="section">
+      <h2>Highlights</h2>
+      <p>
+        Add your best “main” highlight video first, then place shorter clips by category (tackles, carries, set-piece, kicks, points).
+      </p>
+
+      <div class="card">
+        <div class="cardInner">
+          <h3 style="margin:0 0 10px;">Main Highlight Reel</h3>
+          <div class="videoWrap">
+            <!-- Replace VIDEO_ID with your YouTube video ID -->
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              title="Rocco Loprestti - Main Highlights"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+
+          <div style="height:14px;"></div>
+
+          <div class="grid3">
+            <div class="card" style="background:rgba(14,22,48,.35); box-shadow:none;">
+              <div class="cardInner">
+                <h3 style="margin:0 0 10px; font-size:16px;">Defense / Tackles</h3>
+                <div class="videoWrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Defense Highlights"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="background:rgba(14,22,48,.35); box-shadow:none;">
+              <div class="cardInner">
+                <h3 style="margin:0 0 10px; font-size:16px;">Carries / Contact</h3>
+                <div class="videoWrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Carries Highlights"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" style="background:rgba(14,22,48,.35); box-shadow:none;">
+              <div class="cardInner">
+                <h3 style="margin:0 0 10px; font-size:16px;">Kicking / Goal Kicking</h3>
+                <div class="videoWrap">
+                  <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Kicking Highlights"
+                    frameborder="0"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="smallNote">
+            If you don’t want YouTube embeds, you can link to clips directly instead. Coaches often like 30–60 second clips grouped by skill.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" class="section">
+      <h2>Player Profile</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Physical</h3>
+            <ul class="list">
+              <li>Height: 1.84 m (6’1”)</li>
+              <li>Weight: 97 kg</li>
+              <li>Strong contact presence and work rate</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Positions</h3>
+            <ul class="list">
+              <li>Prop (Pillar)</li>
+              <li>Second Row</li>
+              <li>Back Row</li>
+              <li>Center</li>
+            </ul>
+            <p class="smallNote">Versatility across forwards and midfield roles.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Playing Style</h3>
+            <ul class="list">
+              <li>Reliable defender and physical tackler</li>
+              <li>Comfortable carrying into contact</li>
+              <li>Can kick in open play</li>
+              <li>Goal-kicking (kicks at posts)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="card">
+        <div class="cardInner">
+          <ul class="list">
+            <li><b>2012–2024:</b> Rugby development and competitive play (various teams / seasons)</li>
+            <li><b>2025–present:</b> Cardinals Club</li>
+            <li><b>Ardrey Kell High School:</b> School rugby participation</li>
+          </ul>
+
+          <p class="smallNote">
+            If you want this page to look more official, add: team names (2012–2024), leagues, tournament names, and any notable achievements.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Key Strengths & Skills</h2>
+      <div class="grid3">
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Set Piece & Forwards Work</h3>
+            <ul class="list">
+              <li>Scrum involvement (Prop experience)</li>
+              <li>Second-row physicality and support</li>
+              <li>Back-row mobility and breakdown presence</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Defense & Physicality</h3>
+            <ul class="list">
+              <li>Strong tackling technique</li>
+              <li>Effective contact and collision work</li>
+              <li>High work rate and commitment</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Ball Skills & Kicking</h3>
+            <ul class="list">
+              <li>Comfortable playing Center</li>
+              <li>In-game kicking option</li>
+              <li>Goal kicking (posts)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p class="smallNote">
+        Optional “recruiting extras” to add here: speed metrics (40m time), bench/squat numbers, Yo-Yo test, coach quotes, captain/leadership roles, GPA/academics (if applicable).
+      </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <h2>Photo Gallery</h2>
+      <p>Upload photos into the assets folder and update the filenames below.</p>
+
+      <div class="gallery">
+        <div class="photo"><img src="assets/rocco-1.jpg" alt="Rocco rugby photo 1"></div>
+        <div class="photo"><img src="assets/rocco-2.jpg" alt="Rocco rugby photo 2"></div>
+        <div class="photo"><img src="assets/rocco-3.jpg" alt="Rocco rugby photo 3"></div>
+      </div>
+
+      <p class="smallNote">
+        Best photos: clear jersey number, action shots, one close-up portrait, one team photo.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact / Recruiting</h2>
+      <p>
+        Add the best way for coaches and clubs to reach you. You can use email, Instagram (sports account), or a guardian/parent contact if needed.
+      </p>
+
+      <div class="contactGrid">
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Direct Contact</h3>
+            <ul class="list">
+              <li><b>Email:</b> <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></li>
+              <li><b>Phone (optional):</b> +1 (XXX) XXX-XXXX</li>
+              <li><b>Instagram (optional):</b> <a href="#" target="_blank" rel="noopener">@yourhandle</a></li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <p class="smallNote">
+              Tip: Coaches love one clean link that includes videos + profile + contact. This page does exactly that.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="cardInner">
+            <h3 style="margin:0 0 8px;">Quick Message</h3>
+            <p class="smallNote" style="margin-top:0;">
+              This form doesn’t send automatically (GitHub Pages is static), but it helps visitors write a message.
+            </p>
+
+            <form onsubmit="event.preventDefault(); sendEmail();">
+              <input class="input" id="name" placeholder="Your name" required />
+              <input class="input" id="email" type="email" placeholder="Your email" required />
+              <textarea class="textarea" id="msg" placeholder="Message" required></textarea>
+              <button class="btn btnPrimary" type="submit">Open Email Draft</button>
+            </form>
+
+            <script>
+              function sendEmail(){
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const msg = document.getElementById('msg').value.trim();
+                const subject = encodeURIComponent("Recruiting / Rugby - Rocco Loprestti");
+                const body = encodeURIComponent(
+                  "Name: " + name + "\n" +
+                  "Email: " + email + "\n\n" +
+                  msg + "\n\n" +
+                  "Highlights Page: " + window.location.href
+                );
+                window.location.href = "mailto:YOUR_EMAIL@example.com?subject=" + subject + "&body=" + body;
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>
+        © <span id="year"></span> Rocco Loprestti • Built with GitHub Pages
+      </div>
+      <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </main>
+</body>
+</html>
