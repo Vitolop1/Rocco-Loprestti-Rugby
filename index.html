@@ -7,160 +7,162 @@
     <meta name="description" content="Rocco Loprestti rugby highlights, player profile, positions, experience by country, and contact." />
 
     <style>
-        :root {
-            --bg: #f5f7fa;
-            --card: #ffffff;
-            --text: #0f172a;
-            --muted: #475569;
-            --line: #dbe2ea;
-            --accent: #6cb4e4; /* Argentina light blue */
-        }
+        <style>
+  :root {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #475569;
+    --line: #dbe2ea;
+    --accent: #6cb4e4; /* Argentina light blue */
+  }
 
-        * { box-sizing: border-box; }
+  * { box-sizing: border-box; }
+  html, body { max-width: 100%; overflow-x: hidden; }
 
-        html, body {
-            max-width: 100%;
-            overflow-x: hidden; /* prevents horizontal scroll on zoom */
-        }
+  /* ✅ Fondo para TODA la web (menos el header) */
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-        }
+    /* Imagen de fondo global */
+    background:
+      linear-gradient(rgba(245,247,250,.88), rgba(245,247,250,.95)),
+      url("assets/IMG-20251216-WA0004.jpg") center/cover no-repeat fixed;
 
-        /* Make media always fluid (helps on zoom) */
-        img, iframe { max-width: 100%; height: auto; }
+    /* Si querés que la imagen no “corte” en pantallas altas:
+       background-position: center;
+       background-size: cover;
+    */
+  }
 
-        /* NAV */
-        header {
-            background: #fff;
-            border-bottom: 1px solid var(--line);
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+  /* NAV (queda arriba y NO se “mezcla” con el fondo) */
+  header {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
-        .nav {
-            max-width: 1100px;
-            margin: auto;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 14px;
-            flex-wrap: wrap;
-        }
+  .nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
 
-        .nav h1 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 900;
-            letter-spacing: .2px;
-        }
+  .nav h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: .2px;
+  }
 
-        .navLinks a {
-            margin-left: 12px;
-            text-decoration: none;
-            color: var(--accent);
-            font-weight: 800;
-            font-size: 14px;
-        }
+  .navLinks a {
+    margin-left: 12px;
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 14px;
+  }
 
-        /* HERO */
-        .hero {
-            padding: 70px 20px 50px;
-            background: linear-gradient(rgba(245,247,250,.88),rgba(245,247,250,.95)), url("assets/IMG-20251216-WA0004.jpg") center/cover no-repeat;
-            border-bottom: 1px solid var(--line);
-        }
+  /* HERO: ya NO tiene imagen, solo padding */
+  .hero {
+    padding: 70px 20px 50px;
+    border-bottom: 1px solid var(--line);
+    background: transparent; /* ✅ importante */
+  }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 clamp(14px, 2.2vw, 22px); /* better scaling on zoom */
-        }
+  .container { max-width: 1100px; margin: auto; }
 
-        .heroGrid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); /* zoom-safe */
-            gap: 16px;
-            align-items: stretch;
-        }
+  .heroGrid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr;
+    gap: 16px;
+    align-items: stretch;
+  }
 
-        @media (max-width: 900px) {
-            .heroGrid { grid-template-columns: 1fr; }
-            header { position: static; }
-            .navLinks a { margin-left: 10px; }
-        }
+  @media (max-width: 900px) {
+    .heroGrid { grid-template-columns: 1fr; }
+    header { position: static; }
+    .navLinks a { margin-left: 10px; }
+  }
 
-        .hero h2 {
-            font-size: clamp(28px, 3vw + 12px, 44px); /* zoom-safe */
-            margin: 0 0 10px;
-            font-weight: 1000;
-        }
+  .hero h2 {
+    font-size: 42px;
+    margin: 0 0 10px;
+    font-weight: 1000;
+  }
 
-        .hero p {
-            font-size: clamp(14px, .4vw + 14px, 16px); /* zoom-safe */
-            color: var(--muted);
-            max-width: 760px;
-            margin: 0 0 14px;
-            line-height: 1.6;
-        }
+  .hero p {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 760px;
+    margin: 0 0 14px;
+    line-height: 1.6;
+  }
 
-        .btnRow {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 14px;
-        }
+  .btnRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px 12px;
-            border-radius: 14px;
-            border: 1px solid var(--line);
-            background: #fff;
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 900;
-            font-size: 14px;
-        }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 14px;
+  }
 
-        .btnPrimary {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #06233a;
-        }
+  .btnPrimary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #06233a;
+  }
 
-        /* CARDS / SECTIONS */
-        .card {
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 20px;
-            margin-top: 20px;
-            min-width: 0; /* zoom-safe inside grids */
-        }
+  /* Cards */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 20px;
+  }
 
-        .section { margin: 44px 0; }
+  .section { margin: 44px 0; }
 
-        .sectionTitle {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
+  .sectionTitle {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
 
-        .sectionTitle h3 {
-            font-size: 24px;
-            margin: 0;
-            letter-spacing: .2px;
-        }
+  .sectionTitle h3 {
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: .2px;
+  }
+
+  .hint { font-size: 13px; color: var(--muted); margin: 0; }
+
 
         .hint {
             font-size: 13px;
