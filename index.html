@@ -16,8 +16,11 @@
             --accent: #6cb4e4; /* Argentina light blue */
         }
 
-        * {
-            box-sizing: border-box;
+        * { box-sizing: border-box; }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* prevents horizontal scroll on zoom */
         }
 
         body {
@@ -26,6 +29,9 @@
             background: var(--bg);
             color: var(--text);
         }
+
+        /* Make media always fluid (helps on zoom) */
+        img, iframe { max-width: 100%; height: auto; }
 
         /* NAV */
         header {
@@ -47,12 +53,12 @@
             flex-wrap: wrap;
         }
 
-            .nav h1 {
-                margin: 0;
-                font-size: 18px;
-                font-weight: 900;
-                letter-spacing: .2px;
-            }
+        .nav h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: .2px;
+        }
 
         .navLinks a {
             margin-left: 12px;
@@ -72,37 +78,30 @@
         .container {
             max-width: 1100px;
             margin: auto;
+            padding: 0 clamp(14px, 2.2vw, 22px); /* better scaling on zoom */
         }
 
         .heroGrid {
             display: grid;
-            grid-template-columns: 1.25fr .75fr;
+            grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); /* zoom-safe */
             gap: 16px;
             align-items: stretch;
         }
 
         @media (max-width: 900px) {
-            .heroGrid {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                position: static;
-            }
-
-            .navLinks a {
-                margin-left: 10px;
-            }
+            .heroGrid { grid-template-columns: 1fr; }
+            header { position: static; }
+            .navLinks a { margin-left: 10px; }
         }
 
         .hero h2 {
-            font-size: 42px;
+            font-size: clamp(28px, 3vw + 12px, 44px); /* zoom-safe */
             margin: 0 0 10px;
             font-weight: 1000;
         }
 
         .hero p {
-            font-size: 16px;
+            font-size: clamp(14px, .4vw + 14px, 16px); /* zoom-safe */
             color: var(--muted);
             max-width: 760px;
             margin: 0 0 14px;
@@ -143,11 +142,10 @@
             border-radius: 16px;
             padding: 20px;
             margin-top: 20px;
+            min-width: 0; /* zoom-safe inside grids */
         }
 
-        .section {
-            margin: 44px 0;
-        }
+        .section { margin: 44px 0; }
 
         .sectionTitle {
             display: flex;
@@ -158,11 +156,11 @@
             margin-bottom: 12px;
         }
 
-            .sectionTitle h3 {
-                font-size: 24px;
-                margin: 0;
-                letter-spacing: .2px;
-            }
+        .sectionTitle h3 {
+            font-size: 24px;
+            margin: 0;
+            letter-spacing: .2px;
+        }
 
         .hint {
             font-size: 13px;
@@ -173,7 +171,7 @@
         /* FACTS */
         .facts {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 14px;
             margin-top: 16px;
         }
@@ -183,24 +181,27 @@
             border-radius: 14px;
             padding: 12px;
             background: #f9fbfd;
+            min-width: 0; /* zoom-safe */
         }
 
-            .fact b {
-                display: block;
-                margin-bottom: 6px;
-                font-size: 13px;
-            }
+        .fact b {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
 
-            .fact span {
-                color: var(--muted);
-                font-size: 14px;
-                line-height: 1.45;
-            }
+        .fact span {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.45;
+            overflow-wrap: anywhere; /* prevents overflow on zoom */
+            word-break: break-word;
+        }
 
         /* PROFILE */
         .profileLayout {
             display: grid;
-            grid-template-columns: 420px 1fr;
+            grid-template-columns: minmax(0, 420px) minmax(0, 1fr); /* zoom-safe */
             gap: 26px;
             align-items: start;
             margin-top: 14px;
@@ -218,20 +219,14 @@
         }
 
         @media (max-width: 900px) {
-            .profileLayout {
-                grid-template-columns: 1fr;
-            }
-
-            .profilePhoto {
-                max-width: 420px;
-                margin: auto;
-            }
+            .profileLayout { grid-template-columns: 1fr; }
+            .profilePhoto { max-width: 420px; margin: auto; }
         }
 
         /* QUICK SNAPSHOT */
         .miniFacts {
             display: grid;
-            grid-template-columns: repeat(2,minmax(0,1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 10px;
             margin-top: 10px;
         }
@@ -241,31 +236,32 @@
             border-radius: 14px;
             padding: 10px;
             background: #f9fbfd;
+            min-width: 0;
         }
 
-            .miniFact b {
-                display: block;
-                font-size: 12px;
-                margin-bottom: 6px;
-            }
+        .miniFact b {
+            display: block;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
 
-            .miniFact span {
-                color: var(--muted);
-                font-size: 13px;
-            }
+        .miniFact span {
+            color: var(--muted);
+            font-size: 13px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
 
         /* POSITIONS */
         .positionsGrid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0,1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 14px;
             margin-top: 14px;
         }
 
         @media (max-width: 900px) {
-            .positionsGrid {
-                grid-template-columns: 1fr;
-            }
+            .positionsGrid { grid-template-columns: 1fr; }
         }
 
         .posCard {
@@ -273,6 +269,7 @@
             border-radius: 16px;
             padding: 14px;
             background: #fff;
+            min-width: 0;
         }
 
         .posHeader {
@@ -284,11 +281,11 @@
             margin-bottom: 8px;
         }
 
-            .posHeader h4 {
-                margin: 0;
-                font-size: 16px;
-                font-weight: 1000;
-            }
+        .posHeader h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 1000;
+        }
 
         .pill {
             font-size: 12px;
@@ -306,21 +303,17 @@
             color: var(--muted);
         }
 
-            ul.clean li {
-                margin: 8px 0;
-            }
+        ul.clean li { margin: 8px 0; }
 
         /* EXPERIENCE */
         .expGrid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* USA | Argentina | Italy */
+            grid-template-columns: repeat(3, minmax(0, 1fr)); /* zoom-safe */
             gap: 14px;
         }
 
         @media (max-width: 1000px) {
-            .expGrid {
-                grid-template-columns: 1fr;
-            }
+            .expGrid { grid-template-columns: 1fr; }
         }
 
         .expCard {
@@ -328,6 +321,7 @@
             border-radius: 16px;
             padding: 16px;
             background: #fff;
+            min-width: 0;
         }
 
         .expTop {
@@ -335,6 +329,7 @@
             align-items: center;
             gap: 10px;
             margin-bottom: 10px;
+            min-width: 0;
         }
 
         .flag {
@@ -344,6 +339,7 @@
             border-radius: 10px;
             border: 1px solid var(--line);
             background: #fff;
+            flex: 0 0 auto;
         }
 
         .clubRow {
@@ -353,6 +349,7 @@
             margin-top: 10px;
             padding-top: 10px;
             border-top: 1px solid var(--line);
+            min-width: 0;
         }
 
         .logo {
@@ -365,13 +362,15 @@
             flex: 0 0 auto;
         }
 
-        .clubText b {
-            display: block;
-        }
+        .clubText { min-width: 0; }
+
+        .clubText b { display: block; }
 
         .clubText span {
             color: var(--muted);
             font-size: 13px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
         /* VIDEO */
@@ -385,18 +384,18 @@
         /* GALLERY */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 14px;
         }
 
-            .gallery img {
-                width: 100%;
-                height: 260px;
-                object-fit: cover;
-                border-radius: 16px;
-                border: 1px solid var(--line);
-                background: #fff;
-            }
+        .gallery img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
 
         /* CONTACT */
         .contactBox {
@@ -411,13 +410,15 @@
             color: var(--muted);
             margin: 0;
             font-size: 15px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
         }
 
-            .contactLine a {
-                color: var(--accent);
-                font-weight: 1000;
-                text-decoration: none;
-            }
+        .contactLine a {
+            color: var(--accent);
+            font-weight: 1000;
+            text-decoration: none;
+        }
 
         footer {
             border-top: 1px solid var(--line);
@@ -441,20 +442,21 @@
             border-radius: 16px;
             padding: 14px;
             background: #fff;
+            min-width: 0;
         }
 
-            .kpi h4 {
-                margin: 0 0 8px;
-                font-size: 15px;
-                font-weight: 1000;
-            }
+        .kpi h4 {
+            margin: 0 0 8px;
+            font-size: 15px;
+            font-weight: 1000;
+        }
 
-            .kpi p {
-                margin: 0;
-                color: var(--muted);
-                font-size: 14px;
-                line-height: 1.5;
-            }
+        .kpi p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
 
         .videoIndex {
             width: 100%;
@@ -464,30 +466,33 @@
             border: 1px solid var(--line);
             border-radius: 16px;
             background: #fff;
+            table-layout: fixed; /* zoom-safe for long links */
         }
 
-            .videoIndex th, .videoIndex td {
-                padding: 12px 12px;
-                text-align: left;
-                border-bottom: 1px solid var(--line);
-                vertical-align: top;
-                font-size: 14px;
-            }
+        .videoIndex th, .videoIndex td {
+            padding: 12px 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top;
+            font-size: 14px;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
 
-            .videoIndex th {
-                background: #f9fbfd;
-                font-weight: 1000;
-            }
+        .videoIndex th {
+            background: #f9fbfd;
+            font-weight: 1000;
+        }
 
-            .videoIndex tr:last-child td {
-                border-bottom: none;
-            }
+        .videoIndex tr:last-child td { border-bottom: none; }
 
-            .videoIndex a {
-                color: var(--accent);
-                font-weight: 900;
-                text-decoration: none;
-            }
+        .videoIndex a {
+            color: var(--accent);
+            font-weight: 900;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
 
         .badgeRow {
             display: flex;
@@ -506,7 +511,7 @@
             font-weight: 900;
         }
 
-        /* FIX: missing grid2 layout */
+        /* FIX: grid2 layout */
         .grid2 {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -515,9 +520,7 @@
         }
 
         @media (max-width: 900px) {
-            .grid2 {
-                grid-template-columns: 1fr;
-            }
+            .grid2 { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -593,7 +596,7 @@
 
                 <div>
                     <div class="facts" style="margin-top:0;">
-                        <div class="fact"><b>Full Name</b><span>Rocco Loprestti</span></div>
+                        <div class="fact"><b>Full Name</b><span>Rocco Bonifacio Loprestti</span></div>
                         <div class="fact"><b>Date of Birth</b><span>07/06/2009</span></div>
                         <div class="fact"><b>Height</b><span>1.84 m (6’1”)</span></div>
                         <div class="fact"><b>Weight</b><span>97 kg (214 lb)</span></div>
@@ -659,7 +662,7 @@
             </div>
         </section>
 
-        <!-- POSITIONS -->
+        <!-- POSITIONS (REMOVED SECOND ROW) -->
         <section id="positions" class="section">
             <div class="sectionTitle">
                 <h3>Positions</h3>
@@ -677,17 +680,6 @@
                         <li><b>#1 Loosehead Prop</b> — scrum stability, strong carries, defensive work</li>
                         <li><b>#2 Hooker</b> — lineout throwing, breakdown involvement, set-piece communication</li>
                         <li><b>#3 Tighthead Prop</b> — anchor side, scrum power, close-contact defense</li>
-                    </ul>
-                </div>
-
-                <div class="posCard">
-                    <div class="posHeader">
-                        <h4>Second Row (Locks)</h4>
-                        <span class="pill">4 • 5</span>
-                    </div>
-                    <ul class="clean">
-                        <li><b>#4 Lock</b> — lineout role, tackling + carries, engine room work</li>
-                        <li><b>#5 Lock</b> — scrum drive support, ruck involvement, defensive workload</li>
                     </ul>
                 </div>
 
@@ -781,45 +773,26 @@
                 </div>
 
                 <div class="fact">
+                    <b>🏆 Benetton U16 Champion</b>
+                    <span>
+                        Benetton Rugby (U16)<br>
+                        Champion with Benetton U16 during the 2024 season (Italy).
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <b>🏅 Salta Select U16 (Played Up)</b>
+                    <span>
+                        Selected for <b>Salta U16</b> while competing one division below.<br>
+                        Demonstrated performance above age-group level.
+                    </span>
+                </div>
+
+                <div class="fact">
                     <b>🥈 2nd Place – Charlotte Tournament</b>
                     <span>
                         Cardinals Rugby Club<br>
                         Runner-up finish in the Charlotte Tournament with Cardinals Rugby Club.
-                    </span>
-                </div>
-            </div>
-        </section>
-
-        <!-- LEADERSHIP & MINDSET -->
-        <section id="leadership" class="section">
-            <div class="sectionTitle">
-                <h3>🧠 Leadership & Mindset</h3>
-                <p class="hint">Leadership roles, adaptability, and personal development</p>
-            </div>
-
-            <div class="facts">
-                <div class="fact">
-                    <b>Leadership</b>
-                    <span>
-                        Team Captain at <b>Ardrey Kell High School</b> (USA).<br>
-                        Former Captain in <b>Argentina</b> with Gimnasia y Tiro de Salta.<br>
-                        Leads by example with consistency, work rate, and communication.
-                    </span>
-                </div>
-
-                <div class="fact">
-                    <b>Mindset</b>
-                    <span>
-                        Passionate about rugby and committed to constant improvement—always pushing to learn new skills,
-                        understand new systems, and grow through new challenges.
-                    </span>
-                </div>
-
-                <div class="fact">
-                    <b>Languages</b>
-                    <span>
-                        Fluent and natural communication in three languages:<br>
-                        Spanish (native), English (fluent), and Italian (fluent).
                     </span>
                 </div>
             </div>
@@ -878,6 +851,14 @@
                             <span>2012 – 2024 • Salta, Argentina</span>
                         </div>
                     </div>
+
+                    <div class="clubRow">
+                        <img class="logo" src="assets/Flag_of_Salta.png" alt="Salta selection logo">
+                        <div class="clubText">
+                            <b>Salta Select U16</b>
+                            <span>Selected for Salta U16 while playing one division below</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ITALY -->
@@ -893,8 +874,8 @@
                     <div class="clubRow">
                         <img class="logo" src="assets/BenettonRugbyLogo.png" alt="Benetton Rugby logo">
                         <div class="clubText">
-                            <b>Benetton Rugby</b>
-                            <span>Training & rugby experience in Italy</span>
+                            <b>Benetton Rugby (U16)</b>
+                            <span>Training & competition • Benetton U16 Champion</span>
                         </div>
                     </div>
                 </div>
@@ -918,7 +899,7 @@
                         style="width:100%; height:100%; border:0;">
                 </iframe>
             </div>
-
+        </section>
 
         <!-- VIDEO INDEX FOR COACHES -->
         <section id="video-index" class="section">
@@ -1018,7 +999,7 @@
             </div>
 
             <p class="contactLine" style="margin:0;">
-                References and additional match footage can be provided upon request.
+                References available upon request. Primary reference: <b>Rocco Bonifacio Loprestti</b>.
             </p>
         </section>
 
