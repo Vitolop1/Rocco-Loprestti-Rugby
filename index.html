@@ -426,6 +426,85 @@
             font-size: 14px;
             margin-top: 50px;
         }
+
+        /* EXTRA SECTIONS */
+        .kpiGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .kpi {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 14px;
+            background: #fff;
+        }
+
+            .kpi h4 {
+                margin: 0 0 8px;
+                font-size: 15px;
+                font-weight: 1000;
+            }
+
+            .kpi p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+        .videoIndex {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: #fff;
+        }
+
+            .videoIndex th, .videoIndex td {
+                padding: 12px 12px;
+                text-align: left;
+                border-bottom: 1px solid var(--line);
+                vertical-align: top;
+                font-size: 14px;
+            }
+
+            .videoIndex th {
+                background: #f9fbfd;
+                font-weight: 1000;
+            }
+
+            .videoIndex tr:last-child td {
+                border-bottom: none;
+            }
+
+            .videoIndex a {
+                color: var(--accent);
+                font-weight: 900;
+                text-decoration: none;
+            }
+
+        .badgeRow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #ffffffcc;
+            color: var(--text);
+            font-weight: 900;
+        }
+
     </style>
 </head>
 
@@ -436,12 +515,18 @@
             <h1>Rocco Loprestti</h1>
             <div class="navLinks">
                 <a href="#profile">Profile</a>
+                <a href="#strengths">Strengths</a>
                 <a href="#positions">Positions</a>
                 <a href="#experience">Experience</a>
+                <a href="#recruiting">Recruiting</a>
                 <a href="#highlights">Highlights</a>
+                <a href="#video-index">Video Index</a>
                 <a href="#gallery">Gallery</a>
+                <a href="#education">Education</a>
+                <a href="#references">References</a>
                 <a href="#contact">Contact</a>
             </div>
+
         </div>
     </header>
 
@@ -515,6 +600,53 @@
             </div>
         </section>
 
+        <!-- STRENGTHS -->
+        <section id="strengths" class="section">
+            <div class="sectionTitle">
+                <h3>✅ Player Strengths</h3>
+                <p class="hint">Coach-friendly overview (quick scan)</p>
+            </div>
+
+            <div class="kpiGrid">
+                <div class="kpi">
+                    <h4>💪 Physicality & Contact</h4>
+                    <p>Strong in collisions, confident carrying into contact, and effective in close-quarter defense.</p>
+                </div>
+                <div class="kpi">
+                    <h4>🔁 Versatility</h4>
+                    <p>Comfortable across forwards (1–8) and can also cover both Center roles (12–13) when needed.</p>
+                </div>
+                <div class="kpi">
+                    <h4>🧱 Defense & Work Rate</h4>
+                    <p>Reliable tackler with consistent effort across phases and a focus on winning the next moment.</p>
+                </div>
+                <div class="kpi">
+                    <h4>🗣️ Leadership & Communication</h4>
+                    <p>Leads by example, stays composed under pressure, and communicates clearly to organize teammates.</p>
+                </div>
+                <div class="kpi">
+                    <h4>🎯 Kicking Option</h4>
+                    <p>Provides open-play kicking and goal-kicking ability (penalties/conversions) when required.</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top:14px;">
+                <div class="sectionTitle" style="margin-bottom:8px;">
+                    <h3 style="font-size:18px; margin:0;">🧠 Rugby IQ & On-Field Attributes</h3>
+                    <p class="hint">Decision-making and awareness</p>
+                </div>
+
+                <div class="facts" style="margin-top:0;">
+                    <div class="fact"><b>Game Awareness</b><span>Reads space and contact situations quickly; adjusts lines and support.</span></div>
+                    <div class="fact"><b>Defensive Reads</b><span>Focuses on positioning, line integrity, and tracking threats outside.</span></div>
+                    <div class="fact"><b>Set-Piece Understanding</b><span>Comfortable with roles in scrum/lineout structures and communication.</span></div>
+                    <div class="fact"><b>Discipline Under Pressure</b><span>Stays composed and executes fundamentals when moments matter.</span></div>
+                    <div class="fact"><b>Coachability</b><span>Adapts fast to new systems and feedback—inside and outside the field.</span></div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- POSITIONS -->
         <section id="positions" class="section">
             <div class="sectionTitle">
@@ -580,6 +712,43 @@
                 </div>
             </div>
         </section>
+
+        <!-- RECRUITING / PHYSICAL PROFILE -->
+        <section id="recruiting" class="section">
+            <div class="sectionTitle">
+                <h3>📌 Recruiting & Physical Profile</h3>
+                <p class="hint">Clear status + quick measurable info</p>
+            </div>
+
+            <div class="grid2">
+                <div class="card" style="margin-top:0;">
+                    <h4 style="margin:0 0 8px;">Recruiting Status</h4>
+                    <ul class="clean">
+                        <li><b>Open to trials and opportunities</b> with clubs and programs.</li>
+                        <li><b>Available for camps, tournaments, and training</b> as scheduled.</li>
+                        <li><b>Adaptable to new environments</b> (played in 3 countries) and motivated to keep improving.</li>
+                    </ul>
+
+                    <div class="badgeRow">
+                        <span class="badge">Open to Trials</span>
+                        <span class="badge">Coachable</span>
+                        <span class="badge">International Experience</span>
+                        <span class="badge">Leadership</span>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:0;">
+                    <h4 style="margin:0 0 8px;">Physical Profile</h4>
+                    <div class="facts" style="margin-top:0;">
+                        <div class="fact"><b>Height</b><span>1.84 m (6’1”)</span></div>
+                        <div class="fact"><b>Weight</b><span>97 kg</span></div>
+                        <div class="fact"><b>Style</b><span>Physical and direct, effective in contact and defensive situations</span></div>
+                        <div class="fact"><b>Strength Focus</b><span>Power, work rate, and consistency across phases</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- HONORS & ACHIEVEMENTS -->
         <section id="achievements" class="section">
@@ -717,7 +886,7 @@
                     </div>
                 </div>
 
-</section>
+        </section>
 
         <!-- HIGHLIGHTS (YOUTUBE) -->
         <section id="highlights" class="section">
@@ -765,6 +934,59 @@
             </p>
         </section>
 
+
+        <!-- VIDEO INDEX FOR COACHES -->
+        <section id="video-index" class="section">
+            <div class="sectionTitle">
+                <h3>🧭 Video Index for Coaches</h3>
+                <p class="hint">Direct links to key moments (fast review)</p>
+            </div>
+
+            <table class="videoIndex">
+                <thead>
+                    <tr>
+                        <th style="width:220px;">Category</th>
+                        <th>Quick Links</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>🎯 Goal Kicking</b></td>
+                        <td>
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=77" target="_blank">1:17</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=147" target="_blank">2:27</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>🧱 Tackling & Defense</b></td>
+                        <td>
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=18" target="_blank">0:18</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=32" target="_blank">0:32</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><b>🔥 Tries & Finishing</b></td>
+                        <td>
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=9" target="_blank">0:09</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=14" target="_blank">0:14</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=52" target="_blank">0:52</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=62" target="_blank">1:02</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=88" target="_blank">1:28</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=97" target="_blank">1:37</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=155" target="_blank">2:35</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=164" target="_blank">2:44</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=183" target="_blank">3:03</a>,
+                            <a href="https://youtu.be/Ytw_uyyUWYg?t=192" target="_blank">3:12</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="hint" style="margin-top:10px;">
+                Tip: Coaches can jump directly to each category to evaluate specific skills quickly.
+            </p>
+        </section>
+
         <!-- GALLERY -->
         <section id="gallery" class="section">
             <div class="sectionTitle">
@@ -779,6 +1001,67 @@
                 <img src="assets/IMG-20251216-WA0012.jpg" alt="Rocco tackle">
             </div>
         </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <div class="sectionTitle">
+                <h3>🎓 Education & Student-Athlete</h3>
+                <p class="hint">Discipline, balance, and reliability</p>
+            </div>
+
+            <div class="facts">
+                <div class="fact">
+                    <b>School</b>
+                    <span>Ardrey Kell High School (USA)</span>
+                </div>
+                <div class="fact">
+                    <b>Student-Athlete Focus</b>
+                    <span>Balances academics and rugby with strong discipline, consistency, and time management.</span>
+                </div>
+                <div class="fact">
+                    <b>Professional Habits</b>
+                    <span>Respectful, coachable, and committed to improving through training and feedback.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="section">
+            <div class="sectionTitle">
+                <h3>🎓 Education & Student-Athlete</h3>
+                <p class="hint">Discipline, balance, and reliability</p>
+            </div>
+
+            <div class="facts">
+                <div class="fact">
+                    <b>School</b>
+                    <span>Ardrey Kell High School (USA)</span>
+                </div>
+                <div class="fact">
+                    <b>Student-Athlete Focus</b>
+                    <span>Balances academics and rugby with strong discipline, consistency, and time management.</span>
+                </div>
+                <div class="fact">
+                    <b>Professional Habits</b>
+                    <span>Respectful, coachable, and committed to improving through training and feedback.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- REFERENCES -->
+        <section id="references" class="section card">
+            <div class="sectionTitle">
+                <h3>📎 References</h3>
+                <p class="hint">Available upon request</p>
+            </div>
+
+            <p class="contactLine" style="margin:0;">
+                References and additional match footage can be provided upon request.
+            </p>
+        </section>
+
+
+
 
         <!-- CONTACT -->
         <section id="contact" class="section card">
