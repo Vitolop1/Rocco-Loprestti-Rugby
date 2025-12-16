@@ -1,889 +1,805 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rocco Loprestti | Rugby Highlights & Player Profile</title>
-  <meta name="description" content="Rocco Loprestti rugby highlights, player profile, positions, experience by country, and contact." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rocco Loprestti | Rugby Highlights & Player Profile</title>
+    <meta name="description" content="Rocco Loprestti rugby highlights, player profile, positions, experience by country, and contact." />
 
-  <style>
-    :root{
-      --bg:#f5f7fa;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#dbe2ea;
-      --accent:#6cb4e4; /* Argentina light blue */
-    }
+    <style>
+        :root {
+            --bg: #f5f7fa;
+            --card: #ffffff;
+            --text: #0f172a;
+            --muted: #475569;
+            --line: #dbe2ea;
+            --accent: #6cb4e4; /* Argentina light blue */
+        }
 
-    *{ box-sizing:border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+        }
 
-    /* NAV */
-    header{
-      background:#fff;
-      border-bottom:1px solid var(--line);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+        /* NAV */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
 
-    .nav{
-      max-width:1100px;
-      margin:auto;
-      padding:12px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px;
-      flex-wrap:wrap;
-    }
+        .nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
 
-    .nav h1{
-      margin:0;
-      font-size:18px;
-      font-weight:900;
-      letter-spacing:.2px;
-    }
+            .nav h1 {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 900;
+                letter-spacing: .2px;
+            }
 
-    .navLinks a{
-      margin-left:12px;
-      text-decoration:none;
-      color:var(--accent);
-      font-weight:800;
-      font-size:14px;
-    }
+        .navLinks a {
+            margin-left: 12px;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 14px;
+        }
 
-    /* HERO */
-    .hero{
-      padding:70px 20px 50px;
-      background:
-        linear-gradient(rgba(245,247,250,.88),rgba(245,247,250,.95)),
-        url("assets/IMG-20251216-WA0004.jpg") center/cover no-repeat;
-      border-bottom:1px solid var(--line);
-    }
+        /* HERO */
+        .hero {
+            padding: 70px 20px 50px;
+            background: linear-gradient(rgba(245,247,250,.88),rgba(245,247,250,.95)), url("assets/IMG-20251216-WA0004.jpg") center/cover no-repeat;
+            border-bottom: 1px solid var(--line);
+        }
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-    }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
 
-    .heroGrid{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap:16px;
-      align-items:stretch;
-    }
+        .heroGrid {
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 16px;
+            align-items: stretch;
+        }
 
-    @media (max-width: 900px){
-      .heroGrid{ grid-template-columns: 1fr; }
-      header{ position:static; }
-      .navLinks a{ margin-left:10px; }
-    }
+        @media (max-width: 900px) {
+            .heroGrid {
+                grid-template-columns: 1fr;
+            }
 
-    .hero h2{
-      font-size:42px;
-      margin:0 0 10px;
-      font-weight:1000;
-    }
+            header {
+                position: static;
+            }
 
-    .hero p{
-      font-size:16px;
-      color:var(--muted);
-      max-width:760px;
-      margin:0 0 14px;
-      line-height:1.6;
-    }
+            .navLinks a {
+                margin-left: 10px;
+            }
+        }
 
-    .btnRow{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:14px;
-    }
+        .hero h2 {
+            font-size: 42px;
+            margin: 0 0 10px;
+            font-weight: 1000;
+        }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:#fff;
-      color:var(--text);
-      text-decoration:none;
-      font-weight:900;
-      font-size:14px;
-    }
+        .hero p {
+            font-size: 16px;
+            color: var(--muted);
+            max-width: 760px;
+            margin: 0 0 14px;
+            line-height: 1.6;
+        }
 
-    .btnPrimary{
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #06233a;
-    }
+        .btnRow {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 14px;
+        }
 
-    /* CARDS / SECTIONS */
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:20px;
-      margin-top:20px;
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 12px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 14px;
+        }
 
-    .section{
-      margin:44px 0;
-    }
+        .btnPrimary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #06233a;
+        }
 
-    .sectionTitle{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-bottom:12px;
-    }
+        /* CARDS / SECTIONS */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 20px;
+        }
 
-    .sectionTitle h3{
-      font-size:24px;
-      margin:0;
-      letter-spacing:.2px;
-    }
+        .section {
+            margin: 44px 0;
+        }
 
-    .hint{
-      font-size:13px;
-      color:var(--muted);
-      margin:0;
-    }
+        .sectionTitle {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
 
-    /* FACTS */
-    .facts{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:14px;
-      margin-top:16px;
-    }
+            .sectionTitle h3 {
+                font-size: 24px;
+                margin: 0;
+                letter-spacing: .2px;
+            }
 
-    .fact{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:12px;
-      background:#f9fbfd;
-    }
+        .hint {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 0;
+        }
 
-    .fact b{
-      display:block;
-      margin-bottom:6px;
-      font-size:13px;
-    }
+        /* FACTS */
+        .facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 14px;
+            margin-top: 16px;
+        }
 
-    .fact span{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.45;
-    }
+        .fact {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 12px;
+            background: #f9fbfd;
+        }
 
-    /* PROFILE (BIG photo on the side, NOT a circle, NOT cropped) */
-    .profileLayout{
-      display:grid;
-      grid-template-columns: 420px 1fr;
-      gap:26px;
-      align-items:start;
-      margin-top:14px;
-    }
+            .fact b {
+                display: block;
+                margin-bottom: 6px;
+                font-size: 13px;
+            }
 
-    .profilePhoto{
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      border-radius:18px;
-      border:2px solid var(--line);
-      box-shadow: 0 15px 30px rgba(0,0,0,.12);
-      background:#fff;
-      display:block;
-    }
+            .fact span {
+                color: var(--muted);
+                font-size: 14px;
+                line-height: 1.45;
+            }
 
-    @media (max-width: 900px){
-      .profileLayout{
-        grid-template-columns: 1fr;
-      }
-      .profilePhoto{
-        max-width:420px;
-        margin:auto;
-      }
-    }
+        /* PROFILE (BIG photo on the side, NOT a circle, NOT cropped) */
+        .profileLayout {
+            display: grid;
+            grid-template-columns: 420px 1fr;
+            gap: 26px;
+            align-items: start;
+            margin-top: 14px;
+        }
 
-    /* QUICK SNAPSHOT */
-    .miniFacts{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:10px;
-      margin-top:10px;
-    }
+        .profilePhoto {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 18px;
+            border: 2px solid var(--line);
+            box-shadow: 0 15px 30px rgba(0,0,0,.12);
+            background: #fff;
+            display: block;
+        }
 
-    .miniFact{
-      border:1px solid var(--line);
-      border-radius:14px;
-      padding:10px;
-      background:#f9fbfd;
-    }
+        @media (max-width: 900px) {
+            .profileLayout {
+                grid-template-columns: 1fr;
+            }
 
-    .miniFact b{ display:block; font-size:12px; margin-bottom:6px; }
-    .miniFact span{ color:var(--muted); font-size:13px; }
+            .profilePhoto {
+                max-width: 420px;
+                margin: auto;
+            }
+        }
 
-    /* POSITIONS */
-    .positionsGrid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap:14px;
-      margin-top:14px;
-    }
+        /* QUICK SNAPSHOT */
+        .miniFacts {
+            display: grid;
+            grid-template-columns: repeat(2,minmax(0,1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
 
-    @media (max-width: 900px){
-      .positionsGrid{ grid-template-columns: 1fr; }
-    }
+        .miniFact {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px;
+            background: #f9fbfd;
+        }
 
-    .posCard{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:14px;
-      background:#fff;
-    }
+            .miniFact b {
+                display: block;
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
 
-    .posHeader{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-bottom:8px;
-    }
+            .miniFact span {
+                color: var(--muted);
+                font-size: 13px;
+            }
 
-    .posHeader h4{
-      margin:0;
-      font-size:16px;
-      font-weight:1000;
-    }
+        /* POSITIONS */
+        .positionsGrid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+            gap: 14px;
+            margin-top: 14px;
+        }
 
-    .pill{
-      font-size:12px;
-      font-weight:900;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:#f5fbff;
-      color:#0b2a45;
-    }
+        @media (max-width: 900px) {
+            .positionsGrid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-    ul.clean{
-      margin:10px 0 0;
-      padding-left:18px;
-      color:var(--muted);
-    }
-    ul.clean li{ margin:8px 0; }
+        .posCard {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 14px;
+            background: #fff;
+        }
 
-    .expGrid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr); /* USA | Argentina | Italy */
-    gap:14px;
-    }
+        .posHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
 
-    @media (max-width: 1000px){
-    .expGrid{
-        grid-template-columns: 1fr; /* stack on mobile */
-    }
-    }
+            .posHeader h4 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 1000;
+            }
 
+        .pill {
+            font-size: 12px;
+            font-weight: 900;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #f5fbff;
+            color: #0b2a45;
+        }
 
-    .expCard{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:16px;
-      background:#fff;
-    }
+        ul.clean {
+            margin: 10px 0 0;
+            padding-left: 18px;
+            color: var(--muted);
+        }
 
-    .expTop{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin-bottom:10px;
-    }
+            ul.clean li {
+                margin: 8px 0;
+            }
 
-    .flag{
-    width:70px;
-    height:46px;
-    object-fit:cover;
-    border-radius:10px;
-    border:1px solid var(--line);
-    background:#fff;
-    }
+        .expGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* USA | Argentina | Italy */
+            gap: 14px;
+        }
 
+        @media (max-width: 1000px) {
+            .expGrid {
+                grid-template-columns: 1fr;
+            }
+        }
 
+        .expCard {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            padding: 16px;
+            background: #fff;
+        }
 
-    .clubRow{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      margin-top:10px;
-      padding-top:10px;
-      border-top:1px solid var(--line);
-    }
+        .expTop {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
 
-    .logo{
-      width:44px;
-      height:44px;
-      object-fit:contain;
-      border-radius:10px;
-      border:1px solid var(--line);
-      background:#fff;
-      flex:0 0 auto;
-    }
+        .flag {
+            width: 70px;
+            height: 46px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
 
-    .clubText b{ display:block; }
-    .clubText span{ color:var(--muted); font-size:13px; }
+        .clubRow {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid var(--line);
+        }
 
-    /* VIDEO (MP4) */
-    .videoWrap{
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      background:#fff;
-    }
+        .logo {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+            flex: 0 0 auto;
+        }
 
-    video{
-      width:100%;
-      height:auto;
-      display:block;
-      background:#000;
-    }
+        .clubText b {
+            display: block;
+        }
 
-    /* GALLERY */
-    .gallery{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:14px;
-    }
+        .clubText span {
+            color: var(--muted);
+            font-size: 13px;
+        }
 
-    .gallery img{
-      width:100%;
-      height:260px;
-      object-fit:cover;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:#fff;
-    }
+        /* VIDEO */
+        .videoWrap {
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fff;
+        }
 
-    /* CONTACT */
-    .contactBox{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      align-items:center;
-      justify-content:space-between;
-    }
+        /* GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 14px;
+        }
 
-    .contactLine{
-      color:var(--muted);
-      margin:0;
-      font-size:15px;
-    }
+            .gallery img {
+                width: 100%;
+                height: 260px;
+                object-fit: cover;
+                border-radius: 16px;
+                border: 1px solid var(--line);
+                background: #fff;
+            }
 
-    .contactLine a{
-      color:var(--accent);
-      font-weight:1000;
-      text-decoration:none;
-    }
+        /* CONTACT */
+        .contactBox {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    footer{
-      border-top:1px solid var(--line);
-      padding:20px;
-      text-align:center;
-      color:var(--muted);
-      font-size:14px;
-      margin-top:50px;
-    }
-  </style>
+        .contactLine {
+            color: var(--muted);
+            margin: 0;
+            font-size: 15px;
+        }
+
+            .contactLine a {
+                color: var(--accent);
+                font-weight: 1000;
+                text-decoration: none;
+            }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding: 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <div class="nav">
-    <h1>Rocco Loprestti</h1>
-    <div class="navLinks">
-      <a href="#profile">Profile</a>
-      <a href="#positions">Positions</a>
-      <a href="#experience">Experience</a>
-      <a href="#highlights">Highlights</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container">
-    <div class="heroGrid">
-      <div>
-        <h2>Rocco Loprestti</h2>
-        <p>
-          Rugby player with long-term development since 2012. Versatile across forward positions and also able to play Center.
-          Physical presence, reliable defense, and capable of kicking in open play and at goal.
-        </p>
-
-        <div class="btnRow">
-          <a class="btn btnPrimary" href="#highlights">Watch Highlights</a>
-          <a class="btn" href="#contact">Contact</a>
+    <header>
+        <div class="nav">
+            <h1>Rocco Loprestti</h1>
+            <div class="navLinks">
+                <a href="#profile">Profile</a>
+                <a href="#positions">Positions</a>
+                <a href="#experience">Experience</a>
+                <a href="#highlights">Highlights</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
-      </div>
+    </header>
 
-      <div class="card" style="margin-top:0;">
-        <div class="sectionTitle" style="margin-bottom:8px;">
-          <h3 style="font-size:18px;">Quick Snapshot</h3>
-          <p class="hint">Recruiting-ready</p>
-        </div>
+    <section class="hero">
+        <div class="container">
+            <div class="heroGrid">
+                <div>
+                    <h2>Rocco Loprestti</h2>
+                    <p>
+                        Rugby player with long-term development since 2012. Versatile across forward positions and also able to play Center.
+                        Physical presence, reliable defense, and capable of kicking in open play and at goal.
+                    </p>
 
-        <div class="miniFacts">
-          <div class="miniFact"><b>Date of Birth</b><span>07/06/2009</span></div>
-          <div class="miniFact"><b>Height</b><span>1.84 m (6’1”)</span></div>
-          <div class="miniFact"><b>Weight</b><span>97 kg</span></div>
-          <div class="miniFact"><b>Playing Since</b><span>2012</span></div>
-          <div class="miniFact"><b>Current Club</b><span>Cardinals Club (2025–present)</span></div>
-          <div class="miniFact"><b>School</b><span>Ardrey Kell High School</span></div>
+                    <div class="btnRow">
+                        <a class="btn btnPrimary" href="#highlights">Watch Highlights</a>
+                        <a class="btn" href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:0;">
+                    <div class="sectionTitle" style="margin-bottom:8px;">
+                        <h3 style="font-size:18px;">Quick Snapshot</h3>
+                        <p class="hint">Recruiting-ready</p>
+                    </div>
+
+                    <div class="miniFacts">
+                        <div class="miniFact"><b>Date of Birth</b><span>07/06/2009</span></div>
+                        <div class="miniFact"><b>Height</b><span>1.84 m (6’1”)</span></div>
+                        <div class="miniFact"><b>Weight</b><span>97 kg</span></div>
+                        <div class="miniFact"><b>Playing Since</b><span>2012</span></div>
+                        <div class="miniFact"><b>Current Club</b><span>Cardinals Club (2025–present)</span></div>
+                        <div class="miniFact"><b>School</b><span>Ardrey Kell High School</span></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
+
+    <main class="container">
+
+        <!-- PLAYER PROFILE -->
+        <section id="profile" class="card">
+            <div class="sectionTitle">
+                <h3>Player Profile</h3>
+                <p class="hint">Professional overview for coaches and recruiters</p>
+            </div>
+
+            <div class="profileLayout">
+                <img class="profilePhoto" src="assets/PLAYERPROFILE.jpg" alt="Rocco Loprestti profile photo">
+
+                <div>
+                    <div class="facts" style="margin-top:0;">
+                        <div class="fact"><b>Full Name</b><span>Rocco Loprestti</span></div>
+                        <div class="fact"><b>Date of Birth</b><span>07/06/2009</span></div>
+                        <div class="fact"><b>Height</b><span>1.84 m (6’1”)</span></div>
+                        <div class="fact"><b>Weight</b><span>97 kg</span></div>
+                        <div class="fact"><b>School</b><span>Ardrey Kell High School</span></div>
+                        <div class="fact"><b>Kicking</b><span>Open-play kicking + Goal kicking (at the posts)</span></div>
+                    </div>
+
+                    <div class="fact" style="margin-top:14px;">
+                        <b>Player Summary</b>
+                        <span>
+                            Rocco is a versatile rugby player who adapts quickly both on and off the field. He is passionate about the game,
+                            brings energy and focus to every training session, and takes pride in being reliable under pressure.
+                            Known for his physical presence and work ethic, he contributes in contact, defense, and set-piece situations,
+                            while also offering a kicking option in open play and at goal.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- POSITIONS -->
+        <section id="positions" class="section">
+            <div class="sectionTitle">
+                <h3>Positions</h3>
+                <p class="hint">Playable roles (numbers) + responsibilities</p>
+            </div>
+
+            <div class="positionsGrid">
+
+                <div class="posCard">
+                    <div class="posHeader">
+                        <h4>Front Row</h4>
+                        <span class="pill">1 • 2 • 3</span>
+                    </div>
+                    <ul class="clean">
+                        <li><b>#1 Loosehead Prop</b> — scrum stability, strong carries, defensive work</li>
+                        <li><b>#2 Hooker</b> — lineout throwing, breakdown involvement, set-piece communication</li>
+                        <li><b>#3 Tighthead Prop</b> — anchor side, scrum power, close-contact defense</li>
+                    </ul>
+                </div>
+
+                <div class="posCard">
+                    <div class="posHeader">
+                        <h4>Second Row (Locks)</h4>
+                        <span class="pill">4 • 5</span>
+                    </div>
+                    <ul class="clean">
+                        <li><b>#4 Lock</b> — lineout role, tackling + carries, engine room work</li>
+                        <li><b>#5 Lock</b> — scrum drive support, ruck involvement, defensive workload</li>
+                    </ul>
+                </div>
+
+                <div class="posCard">
+                    <div class="posHeader">
+                        <h4>Back Row</h4>
+                        <span class="pill">6 • 7 • 8</span>
+                    </div>
+                    <ul class="clean">
+                        <li><b>#6 Blindside Flanker</b> — physical defense, strong carries, lineout option</li>
+                        <li><b>#7 Openside Flanker</b> — breakdown pressure, tackling, quick support lines</li>
+                        <li><b>#8 Number Eight</b> — ball control from scrum, carrying, linking play</li>
+                    </ul>
+                </div>
+
+                <div class="posCard">
+                    <div class="posHeader">
+                        <h4>Centers</h4>
+                        <span class="pill">12 • 13</span>
+                    </div>
+                    <ul class="clean">
+                        <li><b>#12 Inside Center</b> — strong contact option, distribution, crash/line-running</li>
+                        <li><b>#13 Outside Center</b> — defensive reads, line speed, finishing and breaks</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="card" style="margin-top:14px;">
+                <b style="display:block; margin-bottom:8px;">Kicking & Goal Kicking</b>
+                <div class="facts" style="margin-top:0;">
+                    <div class="fact"><b>Open-Play Kicking</b><span>Territory / pressure kicks when available</span></div>
+                    <div class="fact"><b>Goal Kicking</b><span>Capable at the posts (penalties/conversions)</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HONORS & ACHIEVEMENTS -->
+        <section id="achievements" class="section">
+            <div class="sectionTitle">
+                <h3>🏆 Honors & Achievements</h3>
+                <p class="hint">Team and individual accomplishments</p>
+            </div>
+
+            <div class="facts">
+                <div class="fact">
+                    <b>🏆 Provincial Champion – Salta (M15)</b>
+                    <span>
+                        Gimnasia y Tiro de Salta<br>
+                        Champion of the Salta Provincial Championship (M15 Division).<br>
+                        <b>🧢 Team Captain</b> and <b>⭐ Final MVP</b>.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <b>🥈 2nd Place – Charlotte Tournament</b>
+                    <span>
+                        Cardinals Rugby Club<br>
+                        Runner-up finish in the Charlotte Tournament with Cardinals Rugby Club.
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP & MINDSET -->
+        <section id="leadership" class="section">
+            <div class="sectionTitle">
+                <h3>🧠 Leadership & Mindset</h3>
+                <p class="hint">Leadership roles, adaptability, and personal development</p>
+            </div>
+
+            <div class="facts">
+                <div class="fact">
+                    <b>Leadership</b>
+                    <span>
+                        Team Captain at <b>Ardrey Kell High School</b> (USA).<br>
+                        Former Captain in <b>Argentina</b> with Gimnasia y Tiro de Salta.<br>
+                        Leads by example with consistency, work rate, and communication.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <b>Mindset</b>
+                    <span>
+                        Passionate about rugby and committed to constant improvement—always pushing to learn new skills,
+                        understand new systems, and grow through new challenges.
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <b>Languages</b>
+                    <span>
+                        Fluent and natural communication in three languages:<br>
+                        Spanish (native), English (fluent), and Italian (fluent).
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE BY COUNTRY -->
+        <section id="experience" class="section">
+            <div class="sectionTitle">
+                <h3>Rugby Experience (by Country)</h3>
+                <p class="hint">With official flags + logos</p>
+            </div>
+
+            <div class="expGrid">
+
+                <!-- USA -->
+                <div class="expCard">
+                    <div class="expTop">
+                        <img class="flag" src="assets/Flag_of_the_United_States.png" alt="USA flag">
+                        <div>
+                            <b>United States</b><br>
+                            <span style="color:var(--muted); font-size:13px;">Current competition pathway</span>
+                        </div>
+                    </div>
+
+                    <div class="clubRow">
+                        <img class="logo" src="assets/CharlotteCardinalsLogo.png" alt="Charlotte Cardinals Rugby Club logo">
+                        <div class="clubText">
+                            <b>Charlotte Cardinals Rugby Club</b>
+                            <span>2025 – Present</span>
+                        </div>
+                    </div>
+
+                    <div class="clubRow">
+                        <img class="logo" src="assets/ArdreyKellHighSchoolPrimaryLogoImage.png" alt="Ardrey Kell High School logo">
+                        <div class="clubText">
+                            <b>Ardrey Kell High School</b>
+                            <span>School participation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ARG -->
+                <div class="expCard">
+                    <div class="expTop">
+                        <img class="flag" src="assets/Flag_of_Argentina.png" alt="Argentina flag">
+                        <div>
+                            <b>Argentina</b><br>
+                            <span style="color:var(--muted); font-size:13px;">Long-term development (2012–2024)</span>
+                        </div>
+                    </div>
+
+                    <div class="clubRow">
+                        <img class="logo" src="assets/Gimnasio_y_tiro_de_salta.png" alt="Gimnasia y Tiro de Salta logo">
+                        <div class="clubText">
+                            <b>Gimnasia y Tiro de Salta</b>
+                            <span>2012 – 2024 • Salta, Argentina</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITALY -->
+                <div class="expCard">
+                    <div class="expTop">
+                        <img class="flag" src="assets/Flag_of_Italy.png" alt="Italy flag">
+                        <div>
+                            <b>Italy</b><br>
+                            <span style="color:var(--muted); font-size:13px;">International rugby experience</span>
+                        </div>
+                    </div>
+
+                    <div class="clubRow">
+                        <img class="logo" src="assets/BenettonRugbyLogo.png" alt="Benetton Rugby logo">
+                        <div class="clubText">
+                            <b>Benetton Rugby</b>
+                            <span>Training & rugby experience in Italy</span>
+                        </div>
+                    </div>
+                </div>
+
 </section>
 
-<main class="container">
+        <!-- HIGHLIGHTS (YOUTUBE) -->
+        <section id="highlights" class="section">
+            <div class="sectionTitle">
+                <h3>Highlights</h3>
+                <p class="hint">Game highlights hosted on YouTube</p>
+            </div>
 
-  <!-- PLAYER PROFILE -->
-  <section id="profile" class="card">
-    <div class="sectionTitle">
-      <h3>Player Profile</h3>
-      <p class="hint">Professional overview for coaches and recruiters</p>
-    </div>
+            <div class="videoWrap" style="padding:0; aspect-ratio:16/9;">
+                <iframe src="https://www.youtube.com/embed/Ytw_uyyUWYg?rel=0&modestbranding=1"
+                        title="Rocco Loprestti Rugby Highlights"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        style="width:100%; height:100%; border:0;">
+                </iframe>
+            </div>
 
-    <div class="profileLayout">
-      <img class="profilePhoto" src="assets/PLAYERPROFILE.jpg" alt="Rocco Loprestti profile photo">
+            <p class="hint" style="margin-top:10px;">
+                <b>🎯 Goal Kicking:</b>
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=77" target="_blank">1:17</a>
+                and
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=147" target="_blank">2:27</a>.
+            </p>
 
-      <div>
-        <div class="facts" style="margin-top:0;">
-          <div class="fact"><b>Full Name</b><span>Rocco Loprestti</span></div>
-          <div class="fact"><b>Date of Birth</b><span>07/06/2009</span></div>
-          <div class="fact"><b>Height</b><span>1.84 m (6’1”)</span></div>
-          <div class="fact"><b>Weight</b><span>97 kg</span></div>
-          <div class="fact"><b>School</b><span>Ardrey Kell High School</span></div>
-          <div class="fact"><b>Kicking</b><span>Open-play kicking + Goal kicking (at the posts)</span></div>
-        </div>
+            <p class="hint">
+                <b>🧱 Tackling & Defense:</b>
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=18" target="_blank">0:18</a>
+                and
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=32" target="_blank">0:32</a>.
+            </p>
 
-        <div class="fact" style="margin-top:14px;">
-          <b>Player Summary</b>
-          <span>
-            Developed through competitive rugby from 2012–2024 in Argentina and currently competing in the United States.
-            Comfortable in multiple forward roles and can also play Center when needed.
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
+            <p class="hint">
+                <b>🔥 Tries & Finishing:</b>
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=9" target="_blank">0:09</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=14" target="_blank">0:14</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=52" target="_blank">0:52</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=62" target="_blank">1:02</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=88" target="_blank">1:28</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=97" target="_blank">1:37</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=155" target="_blank">2:35</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=164" target="_blank">2:44</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=183" target="_blank">3:03</a>,
+                <a href="https://youtu.be/Ytw_uyyUWYg?t=192" target="_blank">3:12</a>.
+            </p>
+        </section>
 
-  <!-- POSITIONS -->
-<section id="positions" class="section">
-  <div class="sectionTitle">
-    <h3>Positions</h3>
-    <p class="hint">Playable roles (numbers) + responsibilities</p>
-  </div>
+        <!-- GALLERY -->
+        <section id="gallery" class="section">
+            <div class="sectionTitle">
+                <h3>Photo Gallery</h3>
+                <p class="hint">Match-day moments</p>
+            </div>
 
-  <div class="positionsGrid">
+            <div class="gallery">
+                <img src="assets/IMG-20251216-WA0001.jpg" alt="Rocco rugby action">
+                <img src="assets/IMG-20251216-WA0005.jpg" alt="Rocco contact play">
+                <img src="assets/IMG-20251216-WA0006.jpg" alt="Rocco match action">
+                <img src="assets/IMG-20251216-WA0012.jpg" alt="Rocco tackle">
+            </div>
+        </section>
 
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>Front Row</h4>
-        <span class="pill">1 • 2 • 3</span>
-      </div>
-      <ul class="clean">
-        <li><b>#1 Loosehead Prop</b> — scrum stability, strong carries, defensive work</li>
-        <li><b>#2 Hooker</b> — lineout throwing, breakdown involvement, set-piece communication</li>
-        <li><b>#3 Tighthead Prop</b> — anchor side, scrum power, close-contact defense</li>
-      </ul>
-    </div>
+        <!-- CONTACT -->
+        <section id="contact" class="section card">
+            <div class="sectionTitle">
+                <h3>Contact</h3>
+                <p class="hint">For coaches, clubs, and recruiting</p>
+            </div>
 
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>Second Row (Locks)</h4>
-        <span class="pill">4 • 5</span>
-      </div>
-      <ul class="clean">
-        <li><b>#4 Lock</b> — lineout role, tackling + carries, engine room work</li>
-        <li><b>#5 Lock</b> — scrum drive support, ruck involvement, defensive workload</li>
-      </ul>
-    </div>
+            <div class="contactBox">
+                <p class="contactLine">
+                    Email: <a href="mailto:lopresttirocco@gmail.com">lopresttirocco@gmail.com</a>
+                </p>
+                <a class="btn btnPrimary" href="mailto:lopresttirocco@gmail.com?subject=Rugby%20Recruiting%20-%20Rocco%20Loprestti">Email Now</a>
+            </div>
+        </section>
 
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>Back Row</h4>
-        <span class="pill">6 • 7 • 8</span>
-      </div>
-      <ul class="clean">
-        <li><b>#6 Blindside Flanker</b> — physical defense, strong carries, lineout option</li>
-        <li><b>#7 Openside Flanker</b> — breakdown pressure, tackling, quick support lines</li>
-        <li><b>#8 Number Eight</b> — ball control from scrum, carrying, linking play</li>
-      </ul>
-    </div>
+    </main>
 
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>Centers</h4>
-        <span class="pill">12 • 13</span>
-      </div>
-      <ul class="clean">
-        <li><b>#12 Inside Center</b> — strong contact option, distribution, crash/line-running</li>
-        <li><b>#13 Outside Center</b> — defensive reads, line speed, finishing and breaks</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="card" style="margin-top:14px;">
-    <b style="display:block; margin-bottom:8px;">Kicking & Goal Kicking</b>
-    <div class="facts" style="margin-top:0;">
-      <div class="fact"><b>Open-Play Kicking</b><span>Territory / pressure kicks when available</span></div>
-      <div class="fact"><b>Goal Kicking</b><span>Capable at the posts (penalties/conversions)</span></div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- HONORS & ACHIEVEMENTS -->
-<section id="achievements" class="section">
-  <div class="sectionTitle">
-    <h3>🏆 Honors & Achievements</h3>
-    <p class="hint">Team and individual accomplishments</p>
-  </div>
-
-  <div class="facts">
-    <div class="fact">
-      <b>🏆 Provincial Champion – Salta (M15)</b>
-      <span>
-        Gimnasia y Tiro de Salta<br>
-        Champion of the Salta Provincial Championship (M15 Division).<br>
-        <b>🧢 Team Captain</b> and <b>⭐ Final MVP</b>.
-      </span>
-    </div>
-
-    <div class="fact">
-      <b>🥈 2nd Place – Charlotte Tournament</b>
-      <span>
-        Cardinals Rugby Club<br>
-        Runner-up finish in the Charlotte Tournament with Cardinals Rugby Club.
-      </span>
-    </div>
-  </div>
-</section>
-<!-- LEADERSHIP & MINDSET -->
-<section id="leadership" class="section">
-  <div class="sectionTitle">
-    <h3>🧠 Leadership & Mindset</h3>
-    <p class="hint">Mental approach, leadership roles, and personal development</p>
-  </div>
-
-  <div class="facts">
-
-    <div class="fact">
-      <b>Leadership Roles</b>
-      <span>
-        Team Captain at <b>Ardrey Kell High School</b> (USA).<br>
-        Former Captain in <b>Argentina</b> with Gimnasia y Tiro de Salta.<br>
-        Recognized for leading by example on and off the field.
-      </span>
-    </div>
-
-    <div class="fact">
-      <b>Competitive Mindset</b>
-      <span>
-        Constantly motivated to improve, learn new skills, and challenge himself in new environments.
-        Open to new cultures, coaching styles, and levels of competition.
-      </span>
-    </div>
-
-    <div class="fact">
-      <b>International Experience</b>
-      <span>
-        Has played rugby in <b>three different countries</b>, adapting quickly to new systems and competitive contexts.
-        Participated in rugby activities and matches in <b>Italy</b>, including experience with <b>Benetton Rugby</b>.
-      </span>
-    </div>
-
-    <div class="fact">
-      <b>Languages</b>
-      <span>
-        Fluent and natural communication in <b>three languages</b>:<br>
-        Spanish (native), English (fluent), and Italian (fluent).
-      </span>
-    </div>
-
-  </div>
-</section>
-
-
-
-  <!-- EXPERIENCE BY COUNTRY -->
-  <section id="experience" class="section">
-    <div class="sectionTitle">
-      <h3>Rugby Experience (by Country)</h3>
-      <p class="hint">With official flags + logos</p>
-    </div>
-
-    <div class="expGrid">
-
-      <!-- USA -->
-      <div class="expCard">
-        <div class="expTop">
-          <img class="flag" src="assets/Flag_of_the_United_States.png" alt="USA flag">
-          <div>
-            <b>United States</b><br>
-            <span style="color:var(--muted); font-size:13px;">Current competition pathway</span>
-          </div>
-        </div>
-
-        <div class="clubRow">
-         <img class="logo" src="assets/CharlotteCardinalsLogo.png" alt="Charlotte Cardinals Rugby Club logo">
-          <div class="clubText">
-            <b>Charlotte Cardinals Rugby Club</b>
-            <span>2025 – Present</span>
-          </div>
-        </div>
-
-        <div class="clubRow">
-          <img class="logo" src="assets/ArdreyKellHighSchoolPrimaryLogoImage.png" alt="Ardrey Kell High School logo">
-          <div class="clubText">
-            <b>Ardrey Kell High School</b>
-            <span>School participation</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ARG -->
-      <div class="expCard">
-        <div class="expTop">
-          <img class="flag" src="assets/Flag_of_Argentina.png" alt="Argentina flag">
-          <div>
-            <b>Argentina</b><br>
-            <span style="color:var(--muted); font-size:13px;">Long-term development (2012–2024)</span>
-          </div>
-        </div>
-
-        <div class="clubRow">
-          <img class="logo" src="assets/Gimnasio_y_tiro_de_salta.png" alt="Gimnasia y Tiro de Salta logo">
-          <div class="clubText">
-            <b>Gimnasia y Tiro de Salta</b>
-            <span>2012 – 2024 • Salta, Argentina</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- ITALY -->
-<div class="expCard">
-  <div class="expTop">
-    <img class="flag" src="assets/Flag_of_Italy.png" alt="Italy flag">
-    <div>
-      <b>Italy</b><br>
-      <span style="color:var(--muted); font-size:13px;">
-        International rugby experience
-      </span>
-    </div>
-  </div>
-
-  <div class="clubRow">
-    <img class="logo" src="assets/BenettonRugbyLogo.png" alt="Benetton Rugby logo">
-    <div class="clubText">
-      <b>Benetton Rugby</b>
-      <span>Training & rugby experience in Italy</span>
-    </div>
-  </div>
-</div>  
-
-    </div>
-  </section>
-
-<!-- HIGHLIGHTS (YOUTUBE) -->
-<section id="highlights" class="section">
-  <div class="sectionTitle">
-    <h3>Highlights</h3>
-    <p class="hint">Game highlights hosted on YouTube</p>
-  </div>
-
-  <div class="videoWrap" style="padding:0; aspect-ratio:16/9;">
-    <iframe
-      src="https://www.youtube.com/embed/Ytw_uyyUWYg?rel=0&modestbranding=1"
-      title="Rocco Loprestti Rugby Highlights"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      style="width:100%; height:100%; border:0;">
-    </iframe>
-  </div>
-
-  <p class="hint" style="margin-top:10px;">
-    <b>🎯 Goal Kicking:</b>
-    See kicking technique and accuracy at
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=77" target="_blank">1:17</a>
-    and
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=147" target="_blank">2:27</a>.
-  </p>
-
-  <p class="hint">
-    <b>🧱 Tackling & Defense:</b>
-    Key defensive moments at
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=18" target="_blank">0:18</a>
-    and
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=32" target="_blank">0:32</a>.
-  </p>
-
-  <p class="hint">
-    <b>🔥 Tries & Finishing:</b>
-    Scoring plays at
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=9" target="_blank">0:09</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=14" target="_blank">0:14</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=52" target="_blank">0:52</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=62" target="_blank">1:02</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=88" target="_blank">1:28</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=97" target="_blank">1:37</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=155" target="_blank">2:35</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=164" target="_blank">2:44</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=183" target="_blank">3:03</a>,
-    <a href="https://youtu.be/Ytw_uyyUWYg?t=192" target="_blank">3:12</a>.
-  </p>
-</section>
-
-  <!-- VIDEO BREAKDOWN -->
-<section id="video-breakdown" class="section">
-  <div class="sectionTitle">
-    <h3>🎬 Video Breakdown</h3>
-    <p class="hint">Category-based clips for coaches (coming soon)</p>
-  </div>
-
-  <div class="positionsGrid">
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>🎯 Goal Kicking (At the Posts)</h4>
-        <span class="pill">Highlights</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: conversions + penalties</li>
-        <li>Add: YouTube link or embedded clip</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>🦵 Open-Play Kicking</h4>
-        <span class="pill">Territory / Pressure</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: tactical kicks + clears</li>
-        <li>Add: timestamps from main highlight video</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>🧱 Tackles & Defense</h4>
-        <span class="pill">Defense</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: dominant tackles + chop tackles</li>
-        <li>Add: best defensive reads</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>🔥 Tries & Finishing</h4>
-        <span class="pill">Attack</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: tries + support lines</li>
-        <li>Add: best finishes and breaks</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>💥 Carries & Contact</h4>
-        <span class="pill">Power</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: line breaks + strong carries</li>
-        <li>Add: ruck entries and cleanouts</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-    <div class="posCard">
-      <div class="posHeader">
-        <h4>🏗️ Set Piece (Scrum / Lineout)</h4>
-        <span class="pill">Forwards</span>
-      </div>
-      <ul class="clean">
-        <li>Coming soon: scrum work + lineout roles</li>
-        <li>Add: clips showing stability and effort</li>
-      </ul>
-      <a class="btn" href="#" onclick="return false;">Add video link later</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" class="section">
-  <div class="sectionTitle">
-    <h3>Photo Gallery</h3>
-    <p class="hint">Match-day moments</p>
-  </div>
-
-  <div class="gallery">
-    <img src="assets/IMG-20251216-WA0001.jpg" alt="Rocco rugby action">
-    <img src="assets/IMG-20251216-WA0005.jpg" alt="Rocco contact play">
-    <img src="assets/IMG-20251216-WA0006.jpg" alt="Rocco match action">
-    <img src="assets/IMG-20251216-WA0012.jpg" alt="Rocco tackle">
-  </div>
-</section>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="section card">
-    <div class="sectionTitle">
-      <h3>Contact</h3>
-      <p class="hint">For coaches, clubs, and recruiting</p>
-    </div>
-
-    <div class="contactBox">
-      <p class="contactLine">
-        Email: <a href="mailto:lopresttirocco@gmail.com">lopresttirocco@gmail.com</a>
-      </p>
-      <a class="btn btnPrimary" href="mailto:lopresttirocco@gmail.com?subject=Rugby%20Recruiting%20-%20Rocco%20Loprestti">Email Now</a>
-    </div>
-  </section>
-
-</main>
-
-<footer>
-  © 2025 Rocco Loprestti • Rugby Highlights & Player Profile
-</footer>
+    <footer>
+        © 2025 Rocco Loprestti • Rugby Highlights & Player Profile
+    </footer>
 
 </body>
 </html>
