@@ -166,58 +166,44 @@
       margin:0;
     }
 
-    /* =========================
-   SEPARADORES ENTRE SECCIONES (más visibles)
+ /* =========================
+   SEPARADOR ENTRE SECCIONES (solo barra celeste grande)
    ========================= */
 
-/* más aire + línea más marcada */
 .section{
   position: relative;
-  padding-bottom: 54px; /* un poquito más */
-  margin: 54px 0;       /* un poquito más */
+  margin: 54px 0;
+  padding-bottom: 54px; /* espacio para la barra */
 }
 
-/* línea principal */
-.section::after{
-  content:"";
-  display:block;
-  width:100%;
-  max-width:1100px;
-  height:2px; /* más gruesa */
-  margin:54px auto 0;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(219,226,234,.25),
-    rgba(219,226,234,.95),
-    rgba(219,226,234,.25),
-    transparent
-  );
-  box-shadow: 0 6px 18px rgba(108,180,228,.20); /* glow suave */
-}
-
-/* “chip” central (se nota muchísimo) */
+/* Barra celeste larga (separador principal) */
 .section::before{
   content:"";
   position:absolute;
   left:50%;
-  bottom:18px;          /* queda arriba de la línea */
+  bottom:18px;
   transform:translateX(-50%);
-  width:86px;
-  height:6px;
+
+  width:min(1100px, calc(100% - 40px)); /* ancho de la página (alineado a container) */
+  height:10px;                          /* más “power” */
   border-radius:999px;
-  background: rgba(108,180,228,.70);            /* acento */
+
+  background: rgba(108,180,228,.75);
   border: 1px solid rgba(108,180,228,.55);
-  box-shadow: 0 10px 26px rgba(108,180,228,.35);
+  box-shadow: 0 14px 34px rgba(108,180,228,.35);
 }
 
-/* no mostrar separador en la última sección del main */
-main.container > .section:last-of-type::after,
-main.container > section.section:last-of-type::after,
+/* Eliminamos la línea finita */
+.section::after{
+  content:none;
+}
+
+/* No mostrar separador en la última sección del main */
 main.container > .section:last-of-type::before,
 main.container > section.section:last-of-type::before{
   display:none;
 }
+
 
     /* FACTS */
     .facts{
