@@ -1,15 +1,15 @@
-## Rocco Loprestti – Rugby Highlights
+# Rocco Loprestti – Rugby Highlights
 
-Static website created to showcase rugby highlights and athletic performance.
+Static website created to showcase rugby highlights for an athlete.
 
-## Technologies
+This project was developed as a personal initiative to create a highlights page for my brother, focusing on clean presentation and usability.
+
+## 🌐 Live Site
+https://vitolop1.github.io/Rocco-Loprestti-Rugby/
+
+## 🛠 Technologies
 - HTML
 - CSS
 
-## Features
-- Embedded highlight videos
-- Simple and clean layout
-- Fast loading static site
-
-## Purpose
-This project was built to practice front-end fundamentals and present sports media in a clear and professional way.
+## 🎯 Purpose
+The goal of this project was to practice front-end fundamentals and build a real-world website to present sports media in a clear and professional way.
