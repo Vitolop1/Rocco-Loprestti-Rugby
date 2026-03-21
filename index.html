@@ -6,13 +6,13 @@
   <title>Rocco Loprestti | International Rugby Prospect</title>
   <meta
     name="description"
-    content="Recruiting-ready rugby profile for Rocco Loprestti featuring physical profile, international experience, highlights, achievements, and contact information."
+    content="Rocco Loprestti rugby profile: U17 forward playing U19, main positions 1, 2, 3, 6, 7 and 8, with highlights, experience, academics, and contact."
   />
   <meta name="theme-color" content="#08111f" />
   <meta property="og:title" content="Rocco Loprestti | International Rugby Prospect" />
   <meta
     property="og:description"
-    content="Built for contact, versatile across multiple positions, and shaped by rugby experience in Argentina, Italy, and the United States."
+    content="U17 forward playing U19 with experience in Argentina, Italy, and the United States."
   />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/PLAYERPROFILE.jpg" />
@@ -29,7 +29,7 @@
       "@type": "Person",
       "name": "Rocco Bonifacio Loprestti",
       "jobTitle": "Rugby Player",
-      "description": "International rugby player with experience in Argentina, Italy, and the United States.",
+      "description": "U17 rugby forward playing in U19 with experience in Argentina, Italy, and the United States.",
       "image": "assets/PLAYERPROFILE.jpg",
       "email": "mailto:lopresttiboni@gmail.com",
       "knowsLanguage": ["Spanish", "English", "Italian"],
@@ -229,7 +229,7 @@
 
     .siteHeader {
       position: sticky;
-      top: 42px;
+      top: 0;
       z-index: 25;
       margin-top: 10px;
       padding-bottom: 10px;
@@ -485,14 +485,14 @@
 
     .heroVisual {
       position: relative;
-      min-height: 620px;
+      min-height: 0;
       display: grid;
       place-items: center;
     }
 
     .heroPhoto {
-      width: min(100%, 520px);
-      height: min(72vh, 640px);
+      width: min(100%, 460px);
+      height: min(68vh, 560px);
       border-radius: 34px;
       overflow: hidden;
       padding: 16px;
@@ -504,8 +504,10 @@
     .heroPhoto img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      object-position: center top;
       border-radius: 24px;
+      background: #0b1423;
     }
 
     .heroScoutCard,
@@ -615,7 +617,8 @@
     .pathTop img {
       width: 54px;
       height: 54px;
-      object-fit: cover;
+      object-fit: contain;
+      padding: 6px;
       border-radius: 16px;
       flex-shrink: 0;
       background: #fff;
@@ -864,7 +867,7 @@
       .educationGrid,
       .filmLayout { grid-template-columns: 1fr; }
       .heroVisual { min-height: auto; padding-top: 12px; }
-      .heroPhoto { width: min(100%, 560px); height: min(72vw, 640px); }
+      .heroPhoto { width: min(100%, 480px); height: min(76vw, 560px); }
       .heroAction { right: 8px; }
       .heroScoutCard { left: 10px; }
       .pathwayStrip,
@@ -911,7 +914,7 @@
 
     @media (max-width: 720px) {
       .announceInner { min-height: 52px; padding: 8px 0; flex-wrap: wrap; }
-      .siteHeader { top: 52px; }
+      .siteHeader { top: 0; }
       .navShell { padding: 14px; }
       .brandName { font-size: 1.46rem; }
       .heroTitle { font-size: clamp(3.2rem, 17vw, 5.4rem); }
@@ -961,13 +964,6 @@
   </style>
 </head>
 <body data-nav-open="false">
-  <div class="announce">
-    <div class="announceInner">
-      <span class="announceBadge">Open Now</span>
-      <span>Available for trials, camps, tournaments, and long-term development opportunities.</span>
-    </div>
-  </div>
-
   <header class="siteHeader">
     <div class="navShell">
       <a class="brand" href="#top" aria-label="Rocco Loprestti home">
@@ -979,9 +975,8 @@
 
       <nav class="siteNav" id="site-nav" aria-label="Primary">
         <a href="#profile">Profile</a>
-        <a href="#strengths">Strengths</a>
         <a href="#positions">Positions</a>
-        <a href="#journey">Journey</a>
+        <a href="#journey">Experience</a>
         <a href="#achievements">Achievements</a>
         <a href="#film">Film</a>
         <a href="#gallery">Gallery</a>
@@ -996,20 +991,17 @@
     <section class="hero">
       <div class="container heroLayout">
         <div class="heroCopy reveal">
-          <span class="eyebrow">Argentina • Italy • United States</span>
-          <h1 class="heroTitle">Built For Contact. Ready For The Next Level.</h1>
+          <span class="eyebrow">U17 Forward Playing U19</span>
+          <h1 class="heroTitle">Rocco Loprestti</h1>
           <p class="heroLead">
-            Rocco Bonifacio Loprestti is a 2009-born rugby player with 13+ years of development,
-            a multi-country pathway, and the versatility to impact matches in the front row, back row,
-            and midfield when needed. He brings physical presence, consistent defense, work rate,
-            trilingual communication, and a goal-kicking option to the profile.
+            U17 player competing in U19, currently with Charlotte Cardinals Rugby Club and Ardrey Kell High School.
+            Main positions: 1, 2, 3, 6, 7 and 8. Goal-kicking is an extra skill.
           </p>
 
           <div class="heroTagline" aria-label="Key recruiting tags">
-            <span>Physical Ball Carrier</span>
-            <span>Front Row / Back Row / Center</span>
-            <span>Trilingual Communicator</span>
-            <span>Student-Athlete</span>
+            <span>1 / 2 / 3 / 6 / 7 / 8</span>
+            <span>U17 Playing U19</span>
+            <span>Goal-Kicking Option</span>
           </div>
 
           <div class="ctaRow">
@@ -1021,23 +1013,23 @@
           <div class="heroStats" aria-label="Quick recruiting snapshot">
             <article class="statCard">
               <span class="metricLabel">Height / Weight</span>
-              <strong class="metricValue">1.84 m / 97 kg</strong>
-              <p class="metricSub">6'1" and 214 lb with a physical, direct style in contact.</p>
+              <strong class="metricValue">1.85 m / 100 kg</strong>
+              <p class="metricSub">6'1" and 220 lb.</p>
             </article>
             <article class="statCard">
-              <span class="metricLabel">Experience</span>
-              <strong class="metricValue">13+ Years</strong>
-              <p class="metricSub">Long-term rugby development since 2012 across multiple systems.</p>
+              <span class="metricLabel">Positions</span>
+              <strong class="metricValue">1 / 2 / 3</strong>
+              <p class="metricSub">Also plays 6, 7 and 8.</p>
             </article>
             <article class="statCard">
-              <span class="metricLabel">Languages</span>
-              <strong class="metricValue">3 Fluent</strong>
-              <p class="metricSub">Spanish, English, and Italian for faster adaptation on and off the field.</p>
+              <span class="metricLabel">Competition</span>
+              <strong class="metricValue">U17 In U19</strong>
+              <p class="metricSub">Playing above his age group.</p>
             </article>
             <article class="statCard">
               <span class="metricLabel">Academics</span>
-              <strong class="metricValue">4.033 GPA</strong>
-              <p class="metricSub">Disciplined student-athlete profile at Ardrey Kell High School.</p>
+              <strong class="metricValue">4.081 / 4.0</strong>
+              <p class="metricSub">Current GPA.</p>
             </article>
           </div>
         </div>
@@ -1045,23 +1037,6 @@
         <div class="heroVisual reveal">
           <div class="heroPhoto">
             <img src="assets/PLAYERPROFILE.jpg" alt="Rocco Loprestti portrait in rugby uniform" loading="eager" />
-          </div>
-
-          <aside class="heroScoutCard">
-            <span class="sectionKicker">Scout Snapshot</span>
-            <strong>Versatile. Physical. Coachable.</strong>
-            <p>
-              A recruiting-ready profile shaped by club, select, and international experience,
-              with the flexibility to contribute in multiple roles and adapt quickly to new environments.
-            </p>
-          </aside>
-
-          <div class="heroAction">
-            <img src="assets/IMG-20251216-WA0012.jpg" alt="Rocco Loprestti in rugby action" loading="eager" />
-            <div class="heroActionCaption">
-              <strong>Contact confidence and repeat effort</strong>
-              <span>Built to compete through collisions, defensive work, and high-involvement phases.</span>
-            </div>
           </div>
         </div>
       </div>
@@ -1072,24 +1047,24 @@
             <img src="assets/Flag_of_Argentina.png" alt="Argentina flag" loading="lazy" />
             <div>
               <span class="pathLabel">Argentina</span>
-              <strong>Foundation and long-term development</strong>
-              <span>2012 to 2024 with Gimnasia y Tiro de Salta and Salta select involvement.</span>
+              <strong>Gimnasia y Tiro de Salta</strong>
+              <span>2012 to 2024. Salta Select U17.</span>
             </div>
           </article>
           <article class="pathwayItem">
             <img src="assets/Flag_of_Italy.png" alt="Italy flag" loading="lazy" />
             <div>
               <span class="pathLabel">Italy</span>
-              <strong>Benetton U16 champion</strong>
-              <span>Competitive experience in a high-level European environment during 2024.</span>
+              <strong>Benetton Rugby U16</strong>
+              <span>2024 season. Benetton U16 champion.</span>
             </div>
           </article>
           <article class="pathwayItem">
             <img src="assets/Flag_of_the_United_States.png" alt="United States flag" loading="lazy" />
             <div>
               <span class="pathLabel">United States</span>
-              <strong>Current pathway and recruiting window</strong>
-              <span>Charlotte Cardinals Rugby Club and Ardrey Kell High School from 2025 onward.</span>
+              <strong>Charlotte Cardinals Rugby Club</strong>
+              <span>U17 player competing in U19 with the No. 1 team in the United States.</span>
             </div>
           </article>
         </div>
@@ -1100,25 +1075,18 @@
       <div class="sectionHeading reveal">
         <div>
           <span class="sectionKicker">Profile</span>
-          <h2 class="sectionTitle">A Prospect Built To Adapt And Compete</h2>
+          <h2 class="sectionTitle">Profile</h2>
         </div>
-        <p class="sectionLead">
-          Clear information for coaches, clubs, academies, and recruiters who need a fast read on Rocco's
-          profile, athletic identity, and long-term upside.
-        </p>
+        <p class="sectionLead">Quick view for coaches and recruiters.</p>
       </div>
 
       <div class="profileGrid">
         <article class="panel profileSummary reveal">
           <p class="summaryText">
-            Rocco combines physicality, work ethic, and flexibility in a way that makes him useful to different
-            game models. He is comfortable in demanding contact situations, reliable in defense, and can contribute
-            value in set-piece roles, close carries, support lines, and midfield coverage when required.
+            Physical forward with strong contact, solid set-piece work, and the ability to play above his age group.
           </p>
           <p class="summaryText">
-            His profile is strengthened by experience in Argentina, Italy, and the United States, plus fluent
-            communication in Spanish, English, and Italian. That combination makes transition into new squads,
-            systems, and environments much smoother.
+            U17 player currently competing in U19. Main positions: 1, 2, 3, 6, 7 and 8.
           </p>
 
           <div class="detailGrid" aria-label="Detailed profile data">
@@ -1132,11 +1100,11 @@
             </article>
             <article class="detailCard">
               <span class="detailLabel">Primary Role Range</span>
-              <div class="detailValue">Front Row, Back Row, and Center coverage</div>
+              <div class="detailValue">1, 2, 3, 6, 7 and 8</div>
             </article>
             <article class="detailCard">
-              <span class="detailLabel">Kicking Profile</span>
-              <div class="detailValue">Open-play kicking and goal-kicking option</div>
+              <span class="detailLabel">Kicking</span>
+              <div class="detailValue">Can kick at goal as an extra skill</div>
             </article>
             <article class="detailCard">
               <span class="detailLabel">Current School</span>
@@ -1151,91 +1119,38 @@
 
         <div class="profileHighlights reveal">
           <article class="profileQuote">
-            <span class="sectionKicker">Recruiting Read</span>
-            <p>
-              "The value in Rocco's profile is not just where he plays, but how quickly he can plug into a team,
-              handle physical demands, and bring consistent effort across roles."
-            </p>
+            <span class="sectionKicker">Current Level</span>
+            <p>U17 player competing in U19.</p>
           </article>
 
           <article class="panel">
-            <span class="sectionKicker">Why Coaches Notice Him</span>
+            <span class="sectionKicker">Quick Notes</span>
             <ul class="list">
-              <li>Comfortable across forward roles with the ability to cover both center positions when needed.</li>
-              <li>Strong physical presence in collisions, close carries, and defensive sequences.</li>
-              <li>High coachability and adaptation built through rugby experience in three countries.</li>
-              <li>Trilingual communication supports leadership, integration, and clarity under pressure.</li>
-              <li>Academic consistency reinforces discipline, reliability, and long-term development habits.</li>
+              <li>Main positions: 1, 2, 3, 6, 7 and 8.</li>
+              <li>Strong in contact, defense, and set-piece phases.</li>
+              <li>Can kick at goal if needed.</li>
+              <li>Played in Argentina, Italy, and the United States.</li>
+              <li>Fluent in Spanish, English, and Italian.</li>
             </ul>
           </article>
 
           <div class="chipRow" aria-label="Profile badges">
-            <span class="chip">Open to Trials</span>
-            <span class="chip">International Experience</span>
+            <span class="chip">U17 Playing U19</span>
+            <span class="chip">1 / 2 / 3 / 6 / 7 / 8</span>
             <span class="chip">Goal-Kicking Option</span>
-            <span class="chip">Student-Athlete</span>
-            <span class="chip">Leadership Profile</span>
-            <span class="chip">High Work Rate</span>
+            <span class="chip">4.081 / 4.0 GPA</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section container" id="strengths">
-      <div class="sectionHeading reveal">
-        <div>
-          <span class="sectionKicker">Performance DNA</span>
-          <h2 class="sectionTitle">What He Brings To A Squad</h2>
-        </div>
-        <p class="sectionLead">
-          The most coach-relevant traits in the profile, presented for quick evaluation and easy recruiting conversations.
-        </p>
-      </div>
-
-      <div class="dnaGrid">
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">01</span>
-          <h3>Contact Presence</h3>
-          <p>Confident carrying into traffic, productive in collisions, and committed to defensive work in close quarters.</p>
-        </article>
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">02</span>
-          <h3>Position Flexibility</h3>
-          <p>Can contribute across front row and back row roles while also offering coverage at both center positions.</p>
-        </article>
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">03</span>
-          <h3>Coachability</h3>
-          <p>Adapts quickly to new systems, environments, and standards thanks to international rugby experience.</p>
-        </article>
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">04</span>
-          <h3>Set-Piece Understanding</h3>
-          <p>Comfortable with scrum and lineout responsibilities, communication, and detail in structured phases.</p>
-        </article>
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">05</span>
-          <h3>Communication</h3>
-          <p>Fluent in Spanish, English, and Italian, which helps leadership, cohesion, and faster integration into squads.</p>
-        </article>
-        <article class="dnaCard reveal">
-          <span class="dnaNumber">06</span>
-          <h3>Kicking Value</h3>
-          <p>Can offer open-play kicking and goal-kicking support when match context or roster needs require it.</p>
-        </article>
       </div>
     </section>
 
     <section class="section container" id="positions">
       <div class="sectionHeading reveal">
         <div>
-          <span class="sectionKicker">Role Fit</span>
-          <h2 class="sectionTitle">Positions And On-Field Utility</h2>
+          <span class="sectionKicker">Positions</span>
+          <h2 class="sectionTitle">Positions</h2>
         </div>
-        <p class="sectionLead">
-          A versatile profile is only valuable when the responsibilities are clear. These are the main role families
-          where Rocco can impact games.
-        </p>
+        <p class="sectionLead">Primary positions and extra skill.</p>
       </div>
 
       <div class="positionsGrid">
@@ -1243,51 +1158,51 @@
           <div class="positionHeader">
             <div>
               <span class="sectionKicker">Front Row</span>
-              <h3>1 • 2 • 3</h3>
+              <h3>1 / 2 / 3</h3>
             </div>
             <span class="positionPill">Set Piece + Contact</span>
           </div>
-          <p>Useful where teams need scrum stability, physical carries, and defensive work near the gain line.</p>
+          <p>Strong fit in the front row.</p>
           <ul class="positionList">
-            <li>Loosehead and tighthead value through power, body position, and collision involvement.</li>
-            <li>Hooker value through lineout responsibility, breakdown activity, and communication.</li>
-            <li>Reliable fit for close-quarter phases and structured physical exchanges.</li>
+            <li>Loosehead, hooker, and tighthead.</li>
+            <li>Physical in contact and reliable in set-piece phases.</li>
+            <li>Comfortable in close play and defensive work.</li>
           </ul>
-          <div class="positionNote">Best for squads that want physical commitment and flexibility around the set piece.</div>
+          <div class="positionNote">Main front-row profile.</div>
         </article>
 
         <article class="positionCard reveal">
           <div class="positionHeader">
             <div>
               <span class="sectionKicker">Back Row</span>
-              <h3>6 • 7 • 8</h3>
+              <h3>6 / 7 / 8</h3>
             </div>
             <span class="positionPill">Work Rate + Carrying</span>
           </div>
-          <p>A strong fit when a team needs repeat effort, tackling, support lines, and direct ball-carrying.</p>
+          <p>Can also play across the back row.</p>
           <ul class="positionList">
-            <li>Blindside physicality and lineout support.</li>
-            <li>Openside effort in defense, support, and breakdown pressure.</li>
-            <li>Number eight value through control off the scrum and direct linking play.</li>
+            <li>Blindside, openside, and No. 8.</li>
+            <li>Direct carries, tackling, and repeat effort.</li>
+            <li>Useful when the game needs mobility and physicality.</li>
           </ul>
-          <div class="positionNote">Best for lineups that want high involvement and defensive consistency across phases.</div>
+          <div class="positionNote">Strong secondary role group.</div>
         </article>
 
         <article class="positionCard reveal">
           <div class="positionHeader">
             <div>
-              <span class="sectionKicker">Midfield Coverage</span>
-              <h3>12 • 13</h3>
+              <span class="sectionKicker">Extra</span>
+              <h3>Goal Kicking</h3>
             </div>
-            <span class="positionPill">Defensive Reads + Line Running</span>
+            <span class="positionPill">Added Value</span>
           </div>
-          <p>Offers additional tactical value when a roster needs midfield coverage without losing physicality.</p>
+          <p>Not a main role, but it adds value.</p>
           <ul class="positionList">
-            <li>Inside center value through direct carrying, contact strength, and distribution support.</li>
-            <li>Outside center value through defensive reads, line speed, and finishing opportunities.</li>
-            <li>Useful option when versatility matters during tournaments, travel, or squad rotation.</li>
+            <li>Can kick at goal when needed.</li>
+            <li>Useful as an extra option for the team.</li>
+            <li>Not presented as a primary profile point.</li>
           </ul>
-          <div class="positionNote">Best for coaches who value multi-role coverage and game-day adaptability.</div>
+          <div class="positionNote">Extra skill, not a main position.</div>
         </article>
       </div>
     </section>
@@ -1295,13 +1210,10 @@
     <section class="section container" id="journey">
       <div class="sectionHeading reveal">
         <div>
-          <span class="sectionKicker">International Pathway</span>
-          <h2 class="sectionTitle">Development Across Three Rugby Environments</h2>
+          <span class="sectionKicker">Experience</span>
+          <h2 class="sectionTitle">Experience</h2>
         </div>
-        <p class="sectionLead">
-          Rocco's growth has come through different rugby cultures, different demands, and different expectations.
-          That breadth is a meaningful part of the profile.
-        </p>
+        <p class="sectionLead">Argentina, Italy and United States.</p>
       </div>
 
       <div class="journeyGrid">
@@ -1311,7 +1223,7 @@
             <div class="pathMeta">
               <span class="pathLabel">Argentina</span>
               <strong>2012 - 2024</strong>
-              <span>Long-term development in Salta.</span>
+              <span>Development in Salta.</span>
             </div>
           </div>
           <div class="clubList">
@@ -1325,8 +1237,8 @@
             <div class="clubItem">
               <img src="assets/Flag_of_Salta.png" alt="Salta emblem" loading="lazy" />
               <div>
-                <strong>Salta Select U16</strong>
-                <span>Selected while playing one division below, showing performance above age-group level.</span>
+                <strong>Salta Select U17</strong>
+                <span>Selected for Salta U17.</span>
               </div>
             </div>
           </div>
@@ -1338,7 +1250,7 @@
             <div class="pathMeta">
               <span class="pathLabel">Italy</span>
               <strong>2024</strong>
-              <span>European training and competition exposure.</span>
+              <span>Benetton Rugby.</span>
             </div>
           </div>
           <div class="clubList">
@@ -1346,7 +1258,7 @@
               <img src="assets/BenettonRugbyLogo.png" alt="Benetton Rugby logo" loading="lazy" />
               <div>
                 <strong>Benetton Rugby U16</strong>
-                <span>Training and competition experience culminating in a U16 championship season.</span>
+                <span>Benetton U16 champion.</span>
               </div>
             </div>
           </div>
@@ -1358,7 +1270,7 @@
             <div class="pathMeta">
               <span class="pathLabel">United States</span>
               <strong>2025 - Present</strong>
-              <span>Current playing and academic pathway.</span>
+              <span>Current club and school.</span>
             </div>
           </div>
           <div class="clubList">
@@ -1366,14 +1278,14 @@
               <img src="assets/CharlotteCardinalsLogo.png" alt="Charlotte Cardinals Rugby Club logo" loading="lazy" />
               <div>
                 <strong>Charlotte Cardinals Rugby Club</strong>
-                <span>Current club competition and ongoing development in the U.S. pathway.</span>
+                <span>U.S. champions. No. 1 team in the United States. Rocco is U17 playing in U19.</span>
               </div>
             </div>
             <div class="clubItem">
               <img src="assets/ArdreyKellHighSchoolPrimaryLogoImage.png" alt="Ardrey Kell High School logo" loading="lazy" />
               <div>
                 <strong>Ardrey Kell High School</strong>
-                <span>Student-athlete profile combining academics, training habits, and athletic progression.</span>
+                <span>Current high school.</span>
               </div>
             </div>
           </div>
@@ -1385,43 +1297,31 @@
       <div class="sectionHeading reveal">
         <div>
           <span class="sectionKicker">Achievements</span>
-          <h2 class="sectionTitle">Moments That Validate The Profile</h2>
+          <h2 class="sectionTitle">Achievements</h2>
         </div>
-        <p class="sectionLead">
-          Key achievements that help tell the story behind the player: results, leadership, and performance under pressure.
-        </p>
+        <p class="sectionLead">Short list of key results.</p>
       </div>
 
       <div class="achievementGrid">
         <article class="achievementCard reveal">
           <span class="achievementLabel">Salta, Argentina</span>
           <h3>Provincial Champion</h3>
-          <p>M15 champion with Gimnasia y Tiro de Salta, serving as team captain and earning final MVP honors.</p>
+          <p>M15 champion, team captain, and final MVP.</p>
         </article>
         <article class="achievementCard reveal">
           <span class="achievementLabel">Treviso, Italy</span>
           <h3>Benetton U16 Champion</h3>
-          <p>Part of a championship-winning Benetton U16 environment during the 2024 season.</p>
+          <p>Champion with Benetton U16.</p>
         </article>
         <article class="achievementCard reveal">
           <span class="achievementLabel">Representative Rugby</span>
-          <h3>Salta Select U16</h3>
-          <p>Selected while competing one division below, highlighting performance above standard age-group expectations.</p>
+          <h3>Salta Select U17</h3>
+          <p>Selected for Salta U17.</p>
         </article>
         <article class="achievementCard reveal">
           <span class="achievementLabel">Charlotte, USA</span>
-          <h3>Tournament Runner-Up</h3>
-          <p>Second-place finish at the Charlotte Tournament with Cardinals Rugby Club.</p>
-        </article>
-        <article class="achievementCard reveal">
-          <span class="achievementLabel">Athlete Profile</span>
-          <h3>Trilingual Leader</h3>
-          <p>Fluent communication in three languages supports trust, organization, and quick adaptation in new teams.</p>
-        </article>
-        <article class="achievementCard reveal">
-          <span class="achievementLabel">Student-Athlete</span>
-          <h3>4.033 GPA</h3>
-          <p>Academic consistency reinforces discipline, reliability, and professional habits away from the field.</p>
+          <h3>U17 Playing U19</h3>
+          <p>Competing up in age with Charlotte Cardinals Rugby Club.</p>
         </article>
       </div>
     </section>
@@ -1429,13 +1329,10 @@
     <section class="section container" id="film">
       <div class="sectionHeading reveal">
         <div>
-          <span class="sectionKicker">Film Room</span>
-          <h2 class="sectionTitle">Highlights And Match Evidence</h2>
+          <span class="sectionKicker">Film</span>
+          <h2 class="sectionTitle">Film</h2>
         </div>
-        <p class="sectionLead">
-          Coaches should be able to move from profile to evidence fast. This section keeps the reel front and center,
-          with a quick guide for what to look for on tape.
-        </p>
+        <p class="sectionLead">Short reel with contact, carries and defense.</p>
       </div>
 
       <div class="filmLayout">
@@ -1451,29 +1348,26 @@
         </div>
 
         <aside class="filmSidebar reveal">
-          <span class="filmTag">What Coaches Will See</span>
-          <h3>Film Focus</h3>
-          <p>
-            The reel is positioned to show Rocco in the areas that matter most: physical involvement, defensive intent,
-            versatility, and visible impact across phases.
-          </p>
+          <span class="filmTag">Film Notes</span>
+          <h3>What To Watch</h3>
+          <p>Short points coaches can scan quickly.</p>
 
           <div class="filmList">
             <article class="filmListItem">
               <strong>Carrying Into Contact</strong>
-              <span>Direct running, commitment in collisions, and the ability to attack space with intent.</span>
+              <span>Direct running and physicality.</span>
             </article>
             <article class="filmListItem">
               <strong>Defensive Work Rate</strong>
-              <span>Tackle presence, repeat efforts, and reliability through phase-to-phase defensive sequences.</span>
+              <span>Tackles and repeat effort.</span>
             </article>
             <article class="filmListItem">
-              <strong>Role Versatility</strong>
-              <span>Evidence of a player who can operate in different positional demands without losing intensity.</span>
+              <strong>Set-Piece And Close Play</strong>
+              <span>Useful work in tight phases.</span>
             </article>
             <article class="filmListItem">
-              <strong>Competitive Energy</strong>
-              <span>Urgency, movement, support, and willingness to stay involved in the next action.</span>
+              <strong>Competition Level</strong>
+              <span>U17 player competing against U19.</span>
             </article>
           </div>
 
@@ -1491,9 +1385,7 @@
           <span class="sectionKicker">Photo Gallery</span>
           <h2 class="sectionTitle">Competitive Moments</h2>
         </div>
-        <p class="sectionLead">
-          Match-day imagery that supports the profile with body language, presence, and real-game context.
-        </p>
+        <p class="sectionLead">Match photos.</p>
       </div>
 
       <div class="galleryGrid">
@@ -1527,21 +1419,18 @@
     <section class="section container" id="contact">
       <div class="sectionHeading reveal">
         <div>
-          <span class="sectionKicker">Next Step</span>
-          <h2 class="sectionTitle">Recruiting Contact And Student-Athlete Profile</h2>
+          <span class="sectionKicker">Contact</span>
+          <h2 class="sectionTitle">Contact</h2>
         </div>
-        <p class="sectionLead">
-          Everything needed to continue the conversation: academic context, contact access, and a clean recruiting call to action.
-        </p>
+        <p class="sectionLead">Contact and academics.</p>
       </div>
 
       <div class="educationGrid">
         <article class="educationCard reveal">
           <span class="sectionKicker">Student-Athlete</span>
-          <h3>Reliable Off The Field Too</h3>
+          <h3>Academics</h3>
           <p>
-            Rocco's academic profile adds another layer of trust for programs looking for discipline, structure,
-            and long-term growth potential. He balances sport and school with consistency and a professional mindset.
+            Current school and GPA.
           </p>
 
           <div class="educationPoints">
@@ -1550,16 +1439,16 @@
               <span>Current academic environment in the United States.</span>
             </article>
             <article class="educationStat">
-              <strong>4.033 / 4.0 GPA</strong>
-              <span>Strong classroom performance alongside rugby commitments.</span>
+              <strong>4.081 / 4.0 GPA</strong>
+              <span>Current GPA.</span>
             </article>
             <article class="educationStat">
-              <strong>Disciplined Habits</strong>
-              <span>Time management, consistency, and accountability across daily demands.</span>
+              <strong>U17 Playing U19</strong>
+              <span>Competing above his age group.</span>
             </article>
             <article class="educationStat">
-              <strong>International Adaptability</strong>
-              <span>Comfortable adjusting to new systems, standards, languages, and team cultures.</span>
+              <strong>Languages</strong>
+              <span>Spanish, English and Italian.</span>
             </article>
           </div>
         </article>
@@ -1568,7 +1457,7 @@
           <span class="sectionKicker">Contact</span>
           <h3>Open To Opportunities</h3>
           <p>
-            For coaches, academies, clubs, and recruiters interested in trials, camps, tournaments, or longer-term development pathways.
+            For coaches, academies, clubs and recruiters.
           </p>
 
           <div class="contactDetails">
@@ -1582,13 +1471,13 @@
             <div class="contactRow">
               <div>
                 <div class="contactLabel">Current Status</div>
-                <div class="contactValue">Open to trials, camps, tournaments, and development conversations</div>
+                <div class="contactValue">Available for trials and recruiting conversations</div>
               </div>
             </div>
             <div class="contactRow">
               <div>
                 <div class="contactLabel">Best Fit</div>
-                <div class="contactValue">Programs that value physicality, versatility, coachability, and long-term upside</div>
+                <div class="contactValue">Front row or back row profile with goal-kicking as an extra</div>
               </div>
             </div>
           </div>
@@ -1599,7 +1488,7 @@
           </div>
 
           <div class="referencesNote">
-            References are available upon request. This page is designed to serve as a clean first-contact recruiting profile and highlight entry point.
+            References available upon request.
           </div>
         </article>
       </div>
