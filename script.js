@@ -1,5 +1,6 @@
 ﻿(function () {
   const body = document.body;
+  const siteHeader = document.querySelector('.siteHeader');
   const menuToggle = document.querySelector('.menuToggle');
   const navLinks = Array.from(document.querySelectorAll('.siteNav a'));
   const statusToast = document.getElementById('statusToast');
@@ -87,6 +88,25 @@
     toastTimeout = window.setTimeout(() => statusToast.classList.remove('is-visible'), 2200);
   };
 
+  const getHeaderOffset = () => {
+    if (!siteHeader) return 20;
+    return Math.ceil(siteHeader.getBoundingClientRect().height) + 18;
+  };
+
+  const scrollToAnchor = (hash, smooth) => {
+    if (!hash) return;
+    if (hash === '#top') {
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+      return;
+    }
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    const top = Math.max(0, window.scrollY + target.getBoundingClientRect().top - getHeaderOffset());
+    window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+  };
+
   if (menuToggle) {
     menuToggle.addEventListener('click', () => {
       const nextState = body.dataset.navOpen !== 'true';
@@ -96,7 +116,13 @@
   }
 
   navLinks.forEach((link) => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (event) => {
+      const hash = link.getAttribute('href');
+      if (hash && hash.startsWith('#')) {
+        event.preventDefault();
+        scrollToAnchor(hash, true);
+        window.history.pushState(null, '', hash);
+      }
       body.dataset.navOpen = 'false';
       if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
     });
@@ -164,6 +190,13 @@
   const savedLanguage = window.localStorage.getItem(storageKey);
   const browserLanguage = (navigator.language || 'en').slice(0, 2).toLowerCase();
   applyLanguage(translations[savedLanguage] ? savedLanguage : (translations[browserLanguage] ? browserLanguage : 'en'));
+  const syncHashPosition = () => {
+    if (!window.location.hash) return;
+    window.setTimeout(() => scrollToAnchor(window.location.hash, false), 80);
+  };
+
+  window.addEventListener('load', syncHashPosition);
+  window.addEventListener('hashchange', syncHashPosition);
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 }());

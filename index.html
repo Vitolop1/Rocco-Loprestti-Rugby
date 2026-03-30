@@ -57,7 +57,10 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 124px;
+    }
     body {
       margin: 0;
       min-height: 100vh;
@@ -130,7 +133,7 @@
     .brandKicker { color: var(--sky); }
 
     .section {
-      scroll-margin-top: 110px;
+      scroll-margin-top: 132px;
       margin-top: 48px;
     }
 
@@ -313,6 +316,10 @@
       color: var(--text);
       background: rgba(255, 255, 255, 0.08);
       border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .mobileLangSwitch {
+      display: none;
     }
 
     .siteNav a,
@@ -839,7 +846,14 @@
       background: rgba(0, 0, 0, 0.2);
     }
 
-    .filmFrame iframe { width: 100%; height: 100%; border: 0; }
+    .filmFrame iframe,
+    .filmFrame video {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: cover;
+      background: #09111c;
+    }
     .filmListItem strong { display: block; color: var(--ice); font-size: 0.98rem; }
 
     .galleryGrid {
@@ -976,17 +990,54 @@
     }
 
     @media (max-width: 720px) {
+      html {
+        scroll-padding-top: 156px;
+      }
       .announceInner { min-height: 52px; padding: 8px 0; flex-wrap: wrap; }
       .siteHeader { top: 0; }
-      .navShell { padding: 14px; }
-      .navTools {
-        width: 100%;
-        justify-content: space-between;
+      .section {
+        scroll-margin-top: 168px;
       }
-      .langSwitch { flex-wrap: wrap; }
+      .container,
+      .navShell {
+        width: min(var(--max), calc(100% - 24px));
+      }
+      .navShell {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+      }
+      .brand {
+        min-width: 0;
+      }
+      .brandKicker {
+        font-size: 0.64rem;
+        letter-spacing: 0.14em;
+      }
       .brandName { font-size: 1.46rem; }
+      .menuToggle {
+        min-height: 46px;
+        padding: 10px 14px;
+      }
+      .navTools {
+        display: none;
+      }
+      .mobileLangSwitch {
+        display: inline-flex;
+        width: max-content;
+        margin-top: 6px;
+      }
       .heroTitle { font-size: clamp(3.2rem, 17vw, 5.4rem); }
       .heroLead { font-size: 0.98rem; }
+      .heroTagline span,
+      .chip,
+      .positionPill {
+        font-size: 0.82rem;
+        min-height: 34px;
+        padding: 7px 12px;
+      }
       .heroStats,
       .pathwayStrip,
       .detailGrid,
@@ -996,9 +1047,21 @@
       .achievementGrid,
       .educationPoints,
       .galleryGrid { grid-template-columns: 1fr; }
+      .ctaRow,
+      .filmActions,
+      .contactActions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .ctaRow > *,
+      .filmActions > *,
+      .contactActions > * {
+        width: 100%;
+      }
       .heroPhoto {
-        width: min(100%, 460px);
-        aspect-ratio: 0.7;
+        width: 100%;
+        max-width: 460px;
+        aspect-ratio: 0.72;
         padding: 10px;
       }
       .heroAction,
@@ -1053,6 +1116,12 @@
         <a href="#film">Film</a>
         <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
+        <div class="langSwitch mobileLangSwitch" aria-label="Mobile language selector">
+          <button class="langButton is-active" type="button" data-lang="en">EN</button>
+          <button class="langButton" type="button" data-lang="es">ES</button>
+          <button class="langButton" type="button" data-lang="fr">FR</button>
+          <button class="langButton" type="button" data-lang="it">IT</button>
+        </div>
       </nav>
 
       <div class="navTools">
@@ -1401,12 +1470,10 @@
       <div class="filmLayout">
         <div class="filmFrame reveal">
           <div class="filmFrameInner">
-            <iframe
-              src="https://www.youtube.com/embed/KpsmtZMaFs8"
-              title="Rocco Loprestti Rugby Highlights"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+            <video controls playsinline preload="metadata" poster="assets/IMG-20251216-WA0005.jpg">
+              <source src="assets/Rocco%20Highlights%20Rugby.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
 
