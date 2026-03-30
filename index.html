@@ -839,6 +839,7 @@
     .filmFrame { padding: 14px; }
 
     .filmFrameInner {
+      position: relative;
       border-radius: 24px;
       overflow: hidden;
       aspect-ratio: 16 / 9;
@@ -847,12 +848,49 @@
     }
 
     .filmFrame iframe,
-    .filmFrame video {
+    .filmFrame video,
+    .filmFrame img {
       width: 100%;
       height: 100%;
       border: 0;
       object-fit: cover;
       background: #09111c;
+    }
+
+    .filmCover {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .filmCover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(4, 10, 20, 0.14), rgba(4, 10, 20, 0.58));
+    }
+
+    .filmCoverLabel {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(8, 17, 31, 0.74);
+      color: var(--ice);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      backdrop-filter: blur(10px);
     }
     .filmListItem strong { display: block; color: var(--ice); font-size: 0.98rem; }
 
@@ -1147,7 +1185,7 @@
             Primary positions: 2 and 8.
           </p>
 
-          <div class="heroTagline" aria-label="Key recruiting tags">
+          <div class="heroTagline" aria-label="Key profile tags">
             <span>Hooker</span>
             <span>No. 8</span>
             <span>U17 Playing U19</span>
@@ -1159,7 +1197,7 @@
             <button class="btnGhost" type="button" id="copyEmail">Copy Email</button>
           </div>
 
-          <div class="heroStats" aria-label="Quick recruiting snapshot">
+          <div class="heroStats" aria-label="Player snapshot">
             <article class="statCard">
               <span class="metricLabel">Height / Weight</span>
               <strong class="metricValue">1.85 m / 100 kg</strong>
@@ -1226,7 +1264,7 @@
           <span class="sectionKicker">Profile</span>
           <h2 class="sectionTitle">Profile</h2>
         </div>
-        <p class="sectionLead">Quick view for coaches and recruiters.</p>
+        <p class="sectionLead">Player overview.</p>
       </div>
 
       <div class="profileGrid">
@@ -1464,23 +1502,23 @@
           <span class="sectionKicker">Film</span>
           <h2 class="sectionTitle">Film</h2>
         </div>
-        <p class="sectionLead">Short reel with contact, carries and defense.</p>
+        <p class="sectionLead">Highlights reel.</p>
       </div>
 
       <div class="filmLayout">
         <div class="filmFrame reveal">
           <div class="filmFrameInner">
-            <video controls playsinline preload="metadata" poster="assets/IMG-20251216-WA0005.jpg">
-              <source src="assets/Rocco%20Highlights%20Rugby.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <a class="filmCover" href="https://youtu.be/j-b8gXijXMg" target="_blank" rel="noreferrer" aria-label="Watch Rocco Loprestti highlights on YouTube">
+              <img src="assets/IMG-20251216-WA0005.jpg" alt="Rocco Loprestti in match action" loading="lazy" />
+              <span class="filmCoverLabel">YouTube</span>
+            </a>
           </div>
         </div>
 
         <aside class="filmSidebar reveal">
-          <span class="filmTag">Film Notes</span>
-          <h3>What To Watch</h3>
-          <p>Short points coaches can scan quickly.</p>
+          <span class="filmTag">Highlights</span>
+          <h3>Match Film</h3>
+          <p>Contact, defense, set-piece, and competition level.</p>
 
           <div class="filmList">
             <article class="filmListItem">
@@ -1551,7 +1589,7 @@
           <span class="sectionKicker">Contact</span>
           <h2 class="sectionTitle">Contact</h2>
         </div>
-        <p class="sectionLead">Contact and academics.</p>
+        <p class="sectionLead">Academic profile and contact.</p>
       </div>
 
       <div class="educationGrid">
@@ -1559,7 +1597,7 @@
           <span class="sectionKicker">Student-Athlete</span>
           <h3>Academics</h3>
           <p>
-            Current school and GPA.
+            School and GPA.
           </p>
 
           <div class="educationPoints">
@@ -1584,9 +1622,9 @@
 
         <article class="contactCard reveal">
           <span class="sectionKicker">Contact</span>
-          <h3>Open To Opportunities</h3>
+          <h3>Direct Contact</h3>
           <p>
-            For coaches, academies, clubs and recruiters.
+            Availability and academic profile.
           </p>
 
           <div class="contactDetails">
@@ -1595,12 +1633,11 @@
                 <div class="contactLabel">Primary Email</div>
                 <a class="contactValue" href="mailto:lopresttiboni@gmail.com">lopresttiboni@gmail.com</a>
               </div>
-              <span class="chip">Response-ready</span>
             </div>
             <div class="contactRow">
               <div>
                 <div class="contactLabel">Current Status</div>
-                <div class="contactValue">Available for trials and recruiting conversations</div>
+                <div class="contactValue">Open to recruiting and trial opportunities</div>
               </div>
             </div>
             <div class="contactRow">
@@ -1617,7 +1654,7 @@
           </div>
 
           <div class="referencesNote">
-            References available upon request.
+            References on request.
           </div>
         </article>
       </div>
