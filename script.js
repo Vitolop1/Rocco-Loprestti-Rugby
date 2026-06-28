@@ -52,8 +52,8 @@
     contactLabels: getTexts('.contactCard .contactLabel'),
     contactButtons: [document.querySelector('.contactActions .btnPrimary').textContent.trim(), document.querySelector('.contactActions .btnSecondary').textContent.trim()],
     referencesNote: document.querySelector('.referencesNote').textContent.trim(),
-    footer: 'Rocco Loprestti. Rugby highlights and recruiting profile.',
-    toast: 'Email copied to clipboard'
+    footer: 'Rocco Loprestti. Perfil de rugby.',
+    toast: 'Mail copiado'
   };
 
   const translations = {
@@ -79,6 +79,10 @@
       educationHeading: ['Student-Athlete', 'Accademico', 'Scuola e GPA.'], contactHeading: ['Contatto', 'Contatto Diretto', 'Disponibilita, profilo accademico e contatto del padre.'], contactLabels: ['Email Principale', 'Stato Attuale', 'Contatto del Padre', 'Profilo Migliore'], contactButtons: ['Invia Email', 'Salva in PDF'], referencesNote: 'Referenze su richiesta.', footer: 'Rocco Loprestti. Profilo rugby.', toast: 'Email copiato'
     }
   };
+
+  translations.es = {};
+  translations.fr = {};
+  translations.it = {};
 
   const showToast = (message) => {
     if (!statusToast) return;
@@ -187,9 +191,7 @@
     revealElements.forEach((element) => element.classList.add('is-visible'));
   }
 
-  const savedLanguage = window.localStorage.getItem(storageKey);
-  const browserLanguage = (navigator.language || 'en').slice(0, 2).toLowerCase();
-  applyLanguage(translations[savedLanguage] ? savedLanguage : (translations[browserLanguage] ? browserLanguage : 'en'));
+  applyLanguage('es');
   const syncHashPosition = () => {
     if (!window.location.hash) return;
     window.setTimeout(() => scrollToAnchor(window.location.hash, false), 80);
