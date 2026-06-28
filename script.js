@@ -51,38 +51,159 @@
     contactHeading: [document.querySelector('.contactCard .sectionKicker').textContent.trim(), document.querySelector('.contactCard h3').textContent.trim(), document.querySelector('.contactCard p').textContent.trim()],
     contactLabels: getTexts('.contactCard .contactLabel'),
     contactButtons: [document.querySelector('.contactActions .btnPrimary').textContent.trim(), document.querySelector('.contactActions .btnSecondary').textContent.trim()],
+    pathLabels: getTexts('.pathLabel'),
+    pathCopy: getTexts('.pathwayStrip .pathwayItem div span:not(.pathLabel), #journey .pathMeta span:not(.pathLabel), #journey .clubItem span'),
+    positionKickers: getTexts('#positions .positionCard .sectionKicker'),
+    positionPills: getTexts('#positions .positionPill'),
+    positionCopy: getTexts('#positions .positionCard p'),
+    positionItems: getTexts('#positions .positionList li'),
+    positionNotes: getTexts('#positions .positionNote'),
+    achievementLabels: getTexts('#achievements .achievementLabel'),
+    achievementTitles: getTexts('#achievements .achievementCard h3'),
+    achievementCopy: getTexts('#achievements .achievementCard p'),
+    galleryCaptions: getTexts('#gallery figcaption'),
+    educationStatTitles: getTexts('.educationStat strong'),
+    educationStatCopy: getTexts('.educationStat span'),
+    contactValues: getTexts('.contactCard .contactValue'),
     referencesNote: document.querySelector('.referencesNote').textContent.trim(),
     footer: 'Rocco Loprestti. Perfil de rugby.',
     toast: 'Mail copiado'
   };
 
   const translations = {
-    es: {
-      brandKicker: 'Perfil Internacional de Rugby', nav: ['Perfil', 'Posiciones', 'Experiencia', 'Logros', 'Video', 'Galeria', 'Contacto'], navCta: 'Contacto Recruiting', heroEyebrow: 'Forward U17 Jugando en U19', heroLead: 'Jugador U17 compitiendo en U19, actualmente en Charlotte Cardinals Rugby Club y Ardrey Kell High School. Posiciones principales: 2 y 8.', heroTags: ['Hooker', 'No. 8', 'U17 Jugando U19'], heroButtons: ['Ver Highlights', 'Email a Rocco', 'Copiar Email'], heroMetricLabels: ['Altura / Peso', 'Posiciones', 'Competencia', 'Academico'], heroMetricSubs: ['6\'1\" y 220 lb.', 'Hooker y No. 8.', 'Juega por encima de su edad.', 'GPA actual.'],
-      sectionKickers: ['Perfil', 'Posiciones', 'Experiencia', 'Logros', 'Video', 'Contacto'], sectionTitles: ['Perfil', 'Posiciones', 'Experiencia', 'Logros', 'Video', 'Contacto'], sectionLeads: ['Resumen del jugador.', 'Solo posiciones principales.', 'Argentina, Italia y Estados Unidos.', 'Logros principales.', 'Highlights.', 'Perfil academico y contacto.'],
-      profileSummary: ['Forward fisico con buen contacto, set-piece solido y capacidad para jugar por encima de su edad.', 'Jugador U17 compitiendo actualmente en U19. Posiciones principales: 2 y 8.'], detailLabels: ['Nombre Completo', 'Fecha de Nacimiento', 'Rango Principal', 'Nivel Actual', 'Escuela Actual', 'Club Actual'], currentLevel: 'Jugador U17 compitiendo en U19.', quickNotes: ['Posiciones principales: 2 y 8.', 'Fuerte en contacto, defensa y set-piece.', 'Comodo en fases cerradas y en juego abierto.', 'Jugo en Argentina, Italia y Estados Unidos.', 'Habla espanol, ingles e italiano.'], chips: ['U17 Jugando U19', 'Hooker', 'No. 8', '4.081 / 4.0 GPA'],
-      filmSidebar: ['Video', 'Highlights', 'Contacto, defensa, set-piece y nivel competitivo.'], filmItemTitles: ['Carry al Contacto', 'Work Rate Defensivo', 'Set-Piece y Juego Corto', 'Nivel de Competencia'], filmItemCopy: ['Carrera directa y fisica.', 'Tackles y esfuerzo repetido.', 'Trabajo util en fases cerradas.', 'Jugador U17 compitiendo contra U19.'], filmButtons: ['Abrir en YouTube'],
-      educationHeading: ['Student-Athlete', 'Academico', 'Escuela y GPA.'], contactHeading: ['Contacto', 'Contacto Directo', 'Disponibilidad, perfil academico y contacto del padre.'], contactLabels: ['Email Principal', 'Estado Actual', 'Contacto del Padre', 'Mejor Encaje'], contactButtons: ['Enviar Email', 'Guardar en PDF'], referencesNote: 'Referencias a solicitud.', footer: 'Rocco Loprestti. Perfil de rugby.', toast: 'Email copiado'
+    en: {
+      brandKicker: 'Rugby Profile',
+      menu: 'Menu',
+      nav: ['Profile', 'Positions', 'Experience', 'Achievements', 'Video', 'Gallery', 'Contact'],
+      navCta: 'Contact',
+      heroEyebrow: 'U17 competing in U19',
+      heroLead: 'Rugby player developed in Salta, with experience in Argentina, Italy, and the United States. He currently plays for Charlotte Cardinals Rugby Club, 2026 U.S. High School U19 national champion, and was selected for USA U18.',
+      heroTags: ['Hooker', 'No. 8', 'USA U18'],
+      heroButtons: ['Watch video', 'Send email', 'Copy email'],
+      heroMetricLabels: ['Height / Weight', 'Positions', 'Selection', 'School'],
+      heroMetricSubs: ['6\'1" and 220 lb.', 'Hooker and No. 8.', 'Selected for the U18 national team.', 'Current GPA.'],
+      sectionKickers: ['Profile', 'Positions', 'Experience', 'Achievements', 'Video', 'Gallery', 'Contact'],
+      sectionTitles: ['Profile', 'Positions', 'Experience', 'Achievements', 'Video', 'Photos', 'Contact'],
+      sectionLeads: ['Main player details.', 'Primary positions.', 'Argentina, Italy, and the United States.', 'Clubs, selections, and tournaments.', 'Highlights.', 'Match moments.', 'Academics and contact.'],
+      profileSummary: ['Physical, direct, competitive forward. Strong in contact, defense, and set piece.', 'Plays U19 as a U17, won the U.S. High School U19 national title with Cardinals, and was selected for USA U18.'],
+      detailLabels: ['Full name', 'Date of birth', 'Primary positions', 'Current level', 'Current school', 'Current club'],
+      currentLevel: 'U.S. High School U19 national champion and USA U18 selection.',
+      quickNotes: ['Primary positions: 2 and 8.', 'Strong in contact, defense, and set piece.', 'Competes in U19 as a U17.', 'Played in Argentina, Italy, and the United States.', 'Speaks Spanish, English, and Italian.'],
+      chips: ['USA U18', 'Hooker', 'No. 8', '4.081 / 4.0 GPA'],
+      pathLabels: ['Argentina', 'Italy', 'United States', 'Argentina', 'Italy', 'United States'],
+      pathCopy: ['2012 to 2024. Salta U17 selection.', '2024 season. Benetton U16 champion.', '2026 U.S. High School U19 national champion. Selected for USA U18.', 'Development in Salta.', 'Benetton Rugby.', 'Current club, school, and national selection.', 'Base development, competition, and M15 provincial champion.', 'Selected for Salta U17.', 'Champion with Benetton U16.', '2026 U.S. High School U19 national champion.', 'Selected for the USA U18 national team.', 'Current school.'],
+      positionKickers: ['Hooker', 'No. 8'],
+      positionPills: ['Set piece + contact', 'Work rate + carrying'],
+      positionCopy: ['Strong profile at hooker.', 'Brings carrying, defense, and mobility from the back row.'],
+      positionItems: ['Reliable in contact and set piece.', 'Comfortable in close play, tackling, and repeat efforts.', 'Good fit for a physical, hard-working pack.', 'Direct carries, tackling, and repeat efforts.', 'Useful when the game needs mobility and physical presence.', 'Strong option to impact open play.'],
+      positionNotes: ['Primary position.', 'Primary position.'],
+      achievementLabels: ['United States', 'Selection', 'Salta, Argentina', 'Treviso, Italy', 'Selection', 'Charlotte, United States'],
+      achievementTitles: ['U.S. High School U19 national champion', 'USA U18', 'Provincial champion', 'Benetton U16 champion', 'Salta U17', 'U17 playing U19'],
+      achievementCopy: ['2026 U.S. High School U19 national champion with Charlotte Cardinals Rugby Club.', 'Selected for the USA U18 national team.', 'M15 champion, captain, and best player in the final.', 'Champion during the 2024 season in Italy.', 'Selected for Salta U17.', 'Competes one age group up with Charlotte Cardinals Rugby Club.'],
+      filmSidebar: ['Video', 'Highlights', 'Contact, defense, set piece, and competition level.'],
+      filmItemTitles: ['Contact', 'Defense', 'Set piece and short game', 'Competition level'],
+      filmItemCopy: ['Direct carries and physical presence.', 'Tackles and repeat efforts.', 'Useful work in tight phases.', 'U17 player competing in U19.'],
+      filmButtons: ['Open on YouTube'],
+      galleryCaptions: ['Phase involvement and field presence.', 'Focus before the next action.', 'Physicality and confidence in contact.', 'Direct running and intensity in open play.', 'Repeat efforts and involvement across phases.', 'Match context and competitive pace.'],
+      educationHeading: ['Student-athlete', 'Academics', 'School and GPA.'],
+      educationStatTitles: ['Ardrey Kell High School', '4.081 / 4.0 GPA', 'U17 playing U19', 'Languages'],
+      educationStatCopy: ['Current school in the United States.', 'Current GPA.', 'Competes above his age group.', 'Spanish, English, and Italian.'],
+      contactHeading: ['Contact', 'Direct contact', 'Availability, academic profile, and parent contact.'],
+      contactLabels: ['Primary email', 'Current status', 'Parent contact', 'Best fit'],
+      contactValues: ['lopresttiboni@gmail.com', 'Open to athletic opportunities and trials', 'Agustin Loprestti', 'Hooker or No. 8'],
+      contactButtons: ['Send email', 'Save PDF'],
+      referencesNote: 'References available on request.',
+      toast: 'Email copied'
     },
     fr: {
-      brandKicker: 'Profil International Rugby', nav: ['Profil', 'Postes', 'Experience', 'Distinctions', 'Video', 'Galerie', 'Contact'], navCta: 'Contact Recruiting', heroEyebrow: 'Avant U17 Jouant en U19', heroLead: 'Joueur U17 evoluant en U19, actuellement avec Charlotte Cardinals Rugby Club et Ardrey Kell High School. Postes principaux : 2 et 8.', heroTags: ['Talonneur', 'No. 8', 'U17 Jouant U19'], heroButtons: ['Voir les Highlights', 'Envoyer un Email', 'Copier l\'Email'], heroMetricLabels: ['Taille / Poids', 'Postes', 'Competition', 'Academique'], heroMetricSubs: ['6\'1\" et 220 lb.', 'Talonneur et No. 8.', 'Joue au-dessus de son age.', 'GPA actuel.'],
-      sectionKickers: ['Profil', 'Postes', 'Experience', 'Distinctions', 'Video', 'Contact'], sectionTitles: ['Profil', 'Postes', 'Experience', 'Distinctions', 'Video', 'Contact'], sectionLeads: ['Resume du joueur.', 'Seulement les postes principaux.', 'Argentine, Italie et Etats-Unis.', 'Resultats principaux.', 'Highlights.', 'Profil academique et contact.'],
-      profileSummary: ['Avant physique avec un bon contact, un set-piece solide et la capacite de jouer au-dessus de sa categorie d\'age.', 'Joueur U17 evoluant actuellement en U19. Postes principaux : 2 et 8.'], detailLabels: ['Nom Complet', 'Date de Naissance', 'Gamme Principale', 'Niveau Actuel', 'Ecole Actuelle', 'Club Actuel'], currentLevel: 'Joueur U17 evoluant en U19.', quickNotes: ['Postes principaux : 2 et 8.', 'Fort dans le contact, la defense et le set-piece.', 'A l\'aise dans les phases serrees et le jeu ouvert.', 'A joue en Argentine, en Italie et aux Etats-Unis.', 'Parle espagnol, anglais et italien.'], chips: ['U17 Jouant U19', 'Talonneur', 'No. 8', '4.081 / 4.0 GPA'],
-      filmSidebar: ['Video', 'Highlights', 'Contact, defense, phases statiques et niveau de competition.'], filmItemTitles: ['Carry dans le Contact', 'Volume Defensif', 'Set-Piece et Jeu Court', 'Niveau de Competition'], filmItemCopy: ['Course directe et physique.', 'Plaquages et efforts repetes.', 'Travail utile dans les phases serrees.', 'Joueur U17 jouant contre U19.'], filmButtons: ['Ouvrir sur YouTube'],
-      educationHeading: ['Student-Athlete', 'Academique', 'Ecole et GPA.'], contactHeading: ['Contact', 'Contact Direct', 'Disponibilite, profil academique et contact parent.'], contactLabels: ['Email Principal', 'Statut Actuel', 'Contact Parent', 'Meilleur Profil'], contactButtons: ['Envoyer un Email', 'Enregistrer en PDF'], referencesNote: 'References sur demande.', footer: 'Rocco Loprestti. Profil rugby.', toast: 'Email copie'
+      brandKicker: 'Profil rugby',
+      menu: 'Menu',
+      nav: ['Profil', 'Postes', 'Expérience', 'Palmarès', 'Vidéo', 'Galerie', 'Contact'],
+      navCta: 'Contact',
+      heroEyebrow: 'U17 en compétition U19',
+      heroLead: 'Joueur formé à Salta, avec expérience en Argentine, en Italie et aux États-Unis. Il joue actuellement avec Charlotte Cardinals Rugby Club, champion national High School U19 des États-Unis en 2026, et il a été sélectionné avec USA U18.',
+      heroTags: ['Talonneur', 'No. 8', 'USA U18'],
+      heroButtons: ['Voir la vidéo', 'Envoyer un mail', 'Copier le mail'],
+      heroMetricLabels: ['Taille / Poids', 'Postes', 'Sélection', 'École'],
+      heroMetricSubs: ['6\'1" et 220 lb.', 'Talonneur et No. 8.', 'Sélectionné en U18.', 'GPA actuel.'],
+      sectionKickers: ['Profil', 'Postes', 'Expérience', 'Palmarès', 'Vidéo', 'Galerie', 'Contact'],
+      sectionTitles: ['Profil', 'Postes', 'Expérience', 'Palmarès', 'Vidéo', 'Photos', 'Contact'],
+      sectionLeads: ['Données principales du joueur.', 'Postes principaux.', 'Argentine, Italie et États-Unis.', 'Clubs, sélections et tournois.', 'Actions marquantes.', 'Moments de match.', 'Études et contact.'],
+      profileSummary: ['Forward physique, direct et compétitif. Fort au contact, en défense et sur phases fixes.', 'Il joue en U19 alors qu’il est U17, a gagné le titre national High School U19 avec Cardinals et a été sélectionné avec USA U18.'],
+      detailLabels: ['Nom complet', 'Date de naissance', 'Postes principaux', 'Niveau actuel', 'École actuelle', 'Club actuel'],
+      currentLevel: 'Champion national High School U19 et sélectionné avec USA U18.',
+      quickNotes: ['Postes principaux : 2 et 8.', 'Fort au contact, en défense et sur phases fixes.', 'Joue en U19 en étant U17.', 'A joué en Argentine, en Italie et aux États-Unis.', 'Parle espagnol, anglais et italien.'],
+      chips: ['USA U18', 'Talonneur', 'No. 8', '4.081 / 4.0 GPA'],
+      pathLabels: ['Argentine', 'Italie', 'États-Unis', 'Argentine', 'Italie', 'États-Unis'],
+      pathCopy: ['2012 à 2024. Sélection de Salta U17.', 'Saison 2024. Champion avec Benetton U16.', 'Champion national High School U19 2026. Sélectionné avec USA U18.', 'Formation à Salta.', 'Benetton Rugby.', 'Club actuel, école et sélection.', 'Formation de base, compétition et champion provincial M15.', 'Sélectionné avec Salta U17.', 'Champion avec Benetton U16.', 'Champion national High School U19 des États-Unis en 2026.', 'Sélectionné avec USA U18.', 'École actuelle.'],
+      positionKickers: ['Talonneur', 'No. 8'],
+      positionPills: ['Phases fixes + contact', 'Volume + porteur'],
+      positionCopy: ['Profil solide au poste de talonneur.', 'Apporte portés de balle, défense et mobilité depuis la troisième ligne.'],
+      positionItems: ['Fiable au contact et sur phases fixes.', 'À l’aise dans le jeu fermé, le plaquage et les efforts répétés.', 'Bon profil pour un pack physique et travailleur.', 'Courses directes, plaquage et efforts répétés.', 'Utile quand le match demande mobilité et présence physique.', 'Bonne option pour peser dans le jeu ouvert.'],
+      positionNotes: ['Poste principal.', 'Poste principal.'],
+      achievementLabels: ['États-Unis', 'Sélection', 'Salta, Argentine', 'Trévise, Italie', 'Sélection', 'Charlotte, États-Unis'],
+      achievementTitles: ['Champion national High School U19', 'USA U18', 'Champion provincial', 'Champion avec Benetton U16', 'Salta U17', 'U17 jouant en U19'],
+      achievementCopy: ['Champion national High School U19 des États-Unis avec Charlotte Cardinals Rugby Club en 2026.', 'Sélectionné avec USA U18.', 'Champion M15, capitaine et meilleur joueur de la finale.', 'Champion pendant la saison 2024 en Italie.', 'Sélectionné avec Salta U17.', 'Joue une catégorie au-dessus avec Charlotte Cardinals Rugby Club.'],
+      filmSidebar: ['Vidéo', 'Highlights', 'Contact, défense, phases fixes et niveau de compétition.'],
+      filmItemTitles: ['Contact', 'Défense', 'Phases fixes et jeu court', 'Niveau de compétition'],
+      filmItemCopy: ['Courses directes et présence physique.', 'Plaquages et efforts répétés.', 'Travail utile dans les phases fermées.', 'Joueur U17 en compétition U19.'],
+      filmButtons: ['Ouvrir sur YouTube'],
+      galleryCaptions: ['Implication dans les phases et présence sur le terrain.', 'Concentration avant l’action suivante.', 'Physique et confiance au contact.', 'Course directe et intensité dans le jeu ouvert.', 'Efforts répétés et implication sur plusieurs phases.', 'Contexte de match et rythme compétitif.'],
+      educationHeading: ['Étudiant sportif', 'Études', 'École et GPA.'],
+      educationStatTitles: ['Ardrey Kell High School', '4.081 / 4.0 GPA', 'U17 jouant en U19', 'Langues'],
+      educationStatCopy: ['École actuelle aux États-Unis.', 'GPA actuel.', 'Joue au-dessus de sa catégorie.', 'Espagnol, anglais et italien.'],
+      contactHeading: ['Contact', 'Contact direct', 'Disponibilité, profil académique et contact parent.'],
+      contactLabels: ['Mail principal', 'Statut actuel', 'Contact du père', 'Meilleur profil'],
+      contactValues: ['lopresttiboni@gmail.com', 'Ouvert aux opportunités sportives et aux essais', 'Agustin Loprestti', 'Talonneur ou No. 8'],
+      contactButtons: ['Envoyer un mail', 'Sauvegarder PDF'],
+      referencesNote: 'Références disponibles sur demande.',
+      toast: 'Mail copié'
     },
     it: {
-      brandKicker: 'Profilo Rugby Internazionale', nav: ['Profilo', 'Ruoli', 'Esperienza', 'Riconoscimenti', 'Video', 'Galleria', 'Contatto'], navCta: 'Contatto Recruiting', heroEyebrow: 'Forward U17 che Gioca in U19', heroLead: 'Giocatore U17 che compete in U19, attualmente con Charlotte Cardinals Rugby Club e Ardrey Kell High School. Ruoli principali: 2 e 8.', heroTags: ['Hooker', 'No. 8', 'U17 che Gioca U19'], heroButtons: ['Guarda Highlights', 'Email a Rocco', 'Copia Email'], heroMetricLabels: ['Altezza / Peso', 'Ruoli', 'Competizione', 'Accademico'], heroMetricSubs: ['6\'1\" e 220 lb.', 'Hooker e No. 8.', 'Gioca sopra la sua categoria.', 'GPA attuale.'],
-      sectionKickers: ['Profilo', 'Ruoli', 'Esperienza', 'Riconoscimenti', 'Video', 'Contatto'], sectionTitles: ['Profilo', 'Ruoli', 'Esperienza', 'Riconoscimenti', 'Video', 'Contatto'], sectionLeads: ['Sintesi del giocatore.', 'Solo ruoli principali.', 'Argentina, Italia e Stati Uniti.', 'Risultati principali.', 'Highlights.', 'Profilo accademico e contatto.'],
-      profileSummary: ['Forward fisico con buon contatto, set-piece solido e capacita di giocare sopra la sua fascia d\'eta.', 'Giocatore U17 che compete attualmente in U19. Ruoli principali: 2 e 8.'], detailLabels: ['Nome Completo', 'Data di Nascita', 'Ruoli Principali', 'Livello Attuale', 'Scuola Attuale', 'Club Attuale'], currentLevel: 'Giocatore U17 che compete in U19.', quickNotes: ['Ruoli principali: 2 e 8.', 'Forte nel contatto, nella difesa e nel set-piece.', 'A suo agio nelle fasi strette e nel gioco aperto.', 'Ha giocato in Argentina, Italia e Stati Uniti.', 'Parla spagnolo, inglese e italiano.'], chips: ['U17 che Gioca U19', 'Hooker', 'No. 8', '4.081 / 4.0 GPA'],
-      filmSidebar: ['Video', 'Highlights', 'Contatto, difesa, set-piece e livello competitivo.'], filmItemTitles: ['Carry nel Contatto', 'Work Rate Difensivo', 'Set-Piece e Gioco Corto', 'Livello di Competizione'], filmItemCopy: ['Corsa diretta e fisica.', 'Tackle e sforzo ripetuto.', 'Lavoro utile nelle fasi strette.', 'Giocatore U17 contro U19.'], filmButtons: ['Apri su YouTube'],
-      educationHeading: ['Student-Athlete', 'Accademico', 'Scuola e GPA.'], contactHeading: ['Contatto', 'Contatto Diretto', 'Disponibilita, profilo accademico e contatto del padre.'], contactLabels: ['Email Principale', 'Stato Attuale', 'Contatto del Padre', 'Profilo Migliore'], contactButtons: ['Invia Email', 'Salva in PDF'], referencesNote: 'Referenze su richiesta.', footer: 'Rocco Loprestti. Profilo rugby.', toast: 'Email copiato'
+      brandKicker: 'Profilo rugby',
+      menu: 'Menu',
+      nav: ['Profilo', 'Ruoli', 'Esperienza', 'Risultati', 'Video', 'Galleria', 'Contatto'],
+      navCta: 'Contatto',
+      heroEyebrow: 'U17 che compete in U19',
+      heroLead: 'Giocatore formato a Salta, con esperienza in Argentina, Italia e Stati Uniti. Attualmente gioca con Charlotte Cardinals Rugby Club, campione nazionale High School U19 degli Stati Uniti nel 2026, ed è stato selezionato per USA U18.',
+      heroTags: ['Hooker', 'No. 8', 'USA U18'],
+      heroButtons: ['Guarda video', 'Invia email', 'Copia email'],
+      heroMetricLabels: ['Altezza / Peso', 'Ruoli', 'Selezione', 'Scuola'],
+      heroMetricSubs: ['6\'1" e 220 lb.', 'Hooker e No. 8.', 'Selezionato in U18.', 'GPA attuale.'],
+      sectionKickers: ['Profilo', 'Ruoli', 'Esperienza', 'Risultati', 'Video', 'Galleria', 'Contatto'],
+      sectionTitles: ['Profilo', 'Ruoli', 'Esperienza', 'Risultati', 'Video', 'Foto', 'Contatto'],
+      sectionLeads: ['Dati principali del giocatore.', 'Ruoli principali.', 'Argentina, Italia e Stati Uniti.', 'Club, selezioni e tornei.', 'Azioni in evidenza.', 'Momenti di partita.', 'Studio e contatto.'],
+      profileSummary: ['Forward fisico, diretto e competitivo. Forte nel contatto, in difesa e nelle fasi statiche.', 'Gioca U19 da U17, ha vinto il titolo nazionale High School U19 con Cardinals ed è stato selezionato per USA U18.'],
+      detailLabels: ['Nome completo', 'Data di nascita', 'Ruoli principali', 'Livello attuale', 'Scuola attuale', 'Club attuale'],
+      currentLevel: 'Campione nazionale High School U19 e selezionato per USA U18.',
+      quickNotes: ['Ruoli principali: 2 e 8.', 'Forte nel contatto, in difesa e nelle fasi statiche.', 'Compete in U19 da U17.', 'Ha giocato in Argentina, Italia e Stati Uniti.', 'Parla spagnolo, inglese e italiano.'],
+      chips: ['USA U18', 'Hooker', 'No. 8', '4.081 / 4.0 GPA'],
+      pathLabels: ['Argentina', 'Italia', 'Stati Uniti', 'Argentina', 'Italia', 'Stati Uniti'],
+      pathCopy: ['Dal 2012 al 2024. Selezione Salta U17.', 'Stagione 2024. Campione con Benetton U16.', 'Campione nazionale High School U19 2026. Selezionato per USA U18.', 'Formazione a Salta.', 'Benetton Rugby.', 'Club attuale, scuola e selezione.', 'Formazione di base, competizione e campione provinciale M15.', 'Selezionato con Salta U17.', 'Campione con Benetton U16.', 'Campione nazionale High School U19 degli Stati Uniti nel 2026.', 'Selezionato per USA U18.', 'Scuola attuale.'],
+      positionKickers: ['Hooker', 'No. 8'],
+      positionPills: ['Fasi statiche + contatto', 'Lavoro + portatore'],
+      positionCopy: ['Profilo forte per giocare hooker.', 'Porta avanzamento, difesa e mobilità dalla terza linea.'],
+      positionItems: ['Affidabile nel contatto e nelle fasi statiche.', 'A suo agio nel gioco stretto, nel tackle e negli sforzi ripetuti.', 'Buon profilo per un pack fisico e lavoratore.', 'Corse dirette, tackle e sforzi ripetuti.', 'Utile quando la partita richiede mobilità e presenza fisica.', 'Buona opzione per incidere nel gioco aperto.'],
+      positionNotes: ['Ruolo principale.', 'Ruolo principale.'],
+      achievementLabels: ['Stati Uniti', 'Selezione', 'Salta, Argentina', 'Treviso, Italia', 'Selezione', 'Charlotte, Stati Uniti'],
+      achievementTitles: ['Campione nazionale High School U19', 'USA U18', 'Campione provinciale', 'Campione con Benetton U16', 'Salta U17', 'U17 che gioca U19'],
+      achievementCopy: ['Campione nazionale High School U19 degli Stati Uniti con Charlotte Cardinals Rugby Club nel 2026.', 'Selezionato per USA U18.', 'Campione M15, capitano e miglior giocatore della finale.', 'Campione nella stagione 2024 in Italia.', 'Selezionato con Salta U17.', 'Compete una categoria sopra con Charlotte Cardinals Rugby Club.'],
+      filmSidebar: ['Video', 'Highlights', 'Contatto, difesa, fasi statiche e livello competitivo.'],
+      filmItemTitles: ['Contatto', 'Difesa', 'Fasi statiche e gioco corto', 'Livello competitivo'],
+      filmItemCopy: ['Corse dirette e presenza fisica.', 'Tackle e sforzi ripetuti.', 'Lavoro utile nelle fasi strette.', 'Giocatore U17 che compete in U19.'],
+      filmButtons: ['Apri su YouTube'],
+      galleryCaptions: ['Partecipazione nelle fasi e presenza in campo.', 'Concentrazione prima dell’azione successiva.', 'Fisicità e fiducia nel contatto.', 'Corsa diretta e intensità nel gioco aperto.', 'Sforzi ripetuti e partecipazione in più fasi.', 'Contesto partita e ritmo competitivo.'],
+      educationHeading: ['Studente atleta', 'Studio', 'Scuola e GPA.'],
+      educationStatTitles: ['Ardrey Kell High School', '4.081 / 4.0 GPA', 'U17 che gioca U19', 'Lingue'],
+      educationStatCopy: ['Scuola attuale negli Stati Uniti.', 'GPA attuale.', 'Compete sopra la sua categoria.', 'Spagnolo, inglese e italiano.'],
+      contactHeading: ['Contatto', 'Contatto diretto', 'Disponibilità, profilo scolastico e contatto del padre.'],
+      contactLabels: ['Email principale', 'Stato attuale', 'Contatto del padre', 'Miglior ruolo'],
+      contactValues: ['lopresttiboni@gmail.com', 'Aperto a opportunità sportive e provini', 'Agustin Loprestti', 'Hooker o No. 8'],
+      contactButtons: ['Invia email', 'Salva PDF'],
+      referencesNote: 'Referenze disponibili su richiesta.',
+      toast: 'Email copiata'
     }
   };
-
-  translations.es = {};
-  translations.fr = {};
-  translations.it = {};
 
   const showToast = (message) => {
     if (!statusToast) return;
@@ -147,17 +268,22 @@
     printPageButton.addEventListener('click', () => window.print());
   }
 
-  let activeLanguage = 'en';
+  let activeLanguage = 'es';
   const applyLanguage = (language) => {
     activeLanguage = language;
-    const pack = language === 'en' ? base : { ...base, ...(translations[language] || {}) };
-    document.documentElement.lang = language;
+    const pack = language === 'es' ? base : { ...base, ...(translations[language] || {}) };
+    document.documentElement.lang = language === 'es' ? 'es-AR' : language;
     setText('.brandKicker', pack.brandKicker); setText('.menuToggle', pack.menu); setTexts('.siteNav a', pack.nav); setText('.navCta', pack.navCta);
     setText('.eyebrow', pack.heroEyebrow); setText('.heroLead', pack.heroLead); setTexts('.heroTagline span', pack.heroTags); setTexts('.ctaRow > *', pack.heroButtons); setTexts('.heroStats .metricLabel', pack.heroMetricLabels); setTexts('.heroStats .metricSub', pack.heroMetricSubs);
     setTexts('.sectionHeading .sectionKicker', pack.sectionKickers); setTexts('.sectionHeading .sectionTitle', pack.sectionTitles); setTexts('.sectionHeading .sectionLead', pack.sectionLeads);
     setTexts('#profile .summaryText', pack.profileSummary); setTexts('#profile .detailLabel', pack.detailLabels); setText('.profileQuote p', pack.currentLevel); setTexts('#profile .list li', pack.quickNotes); setTexts('#profile .chipRow .chip', pack.chips);
+    setTexts('.pathLabel', pack.pathLabels); setTexts('.pathwayStrip .pathwayItem div span:not(.pathLabel), #journey .pathMeta span:not(.pathLabel), #journey .clubItem span', pack.pathCopy);
+    setTexts('#positions .positionCard .sectionKicker', pack.positionKickers); setTexts('#positions .positionPill', pack.positionPills); setTexts('#positions .positionCard p', pack.positionCopy); setTexts('#positions .positionList li', pack.positionItems); setTexts('#positions .positionNote', pack.positionNotes);
+    setTexts('#achievements .achievementLabel', pack.achievementLabels); setTexts('#achievements .achievementCard h3', pack.achievementTitles); setTexts('#achievements .achievementCard p', pack.achievementCopy);
     setText('.filmTag', pack.filmSidebar[0]); setText('.filmSidebar h3', pack.filmSidebar[1]); setText('.filmSidebar p', pack.filmSidebar[2]); setTexts('.filmListItem strong', pack.filmItemTitles); setTexts('.filmListItem span', pack.filmItemCopy); setTexts('.filmActions a', pack.filmButtons);
-    setText('.educationCard .sectionKicker', pack.educationHeading[0]); setText('.educationCard h3', pack.educationHeading[1]); setText('.educationCard p', pack.educationHeading[2]); setText('.contactCard .sectionKicker', pack.contactHeading[0]); setText('.contactCard h3', pack.contactHeading[1]); setText('.contactCard p', pack.contactHeading[2]); setTexts('.contactCard .contactLabel', pack.contactLabels); setTexts('.contactActions > *', pack.contactButtons); setText('.referencesNote', pack.referencesNote);
+    setTexts('#gallery figcaption', pack.galleryCaptions);
+    setText('.educationCard .sectionKicker', pack.educationHeading[0]); setText('.educationCard h3', pack.educationHeading[1]); setText('.educationCard p', pack.educationHeading[2]); setTexts('.educationStat strong', pack.educationStatTitles); setTexts('.educationStat span', pack.educationStatCopy);
+    setText('.contactCard .sectionKicker', pack.contactHeading[0]); setText('.contactCard h3', pack.contactHeading[1]); setText('.contactCard p', pack.contactHeading[2]); setTexts('.contactCard .contactLabel', pack.contactLabels); setTexts('.contactCard .contactValue', pack.contactValues); setTexts('.contactActions > *', pack.contactButtons); setText('.referencesNote', pack.referencesNote);
     langButtons.forEach((button) => button.classList.toggle('is-active', button.dataset.lang === language));
   };
 
@@ -191,7 +317,8 @@
     revealElements.forEach((element) => element.classList.add('is-visible'));
   }
 
-  applyLanguage('es');
+  const savedLanguage = window.localStorage.getItem(storageKey);
+  applyLanguage(['en', 'es', 'fr', 'it'].includes(savedLanguage) ? savedLanguage : 'es');
   const syncHashPosition = () => {
     if (!window.location.hash) return;
     window.setTimeout(() => scrollToAnchor(window.location.hash, false), 80);
